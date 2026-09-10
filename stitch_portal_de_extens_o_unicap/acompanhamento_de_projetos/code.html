@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UNICAP - Portal de Extensão Universitária</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#ecf1ff","inverse-primary":"#ffb3b5","primary-fixed-dim":"#ffb3b5","surface-container":"#e7eeff","inverse-surface":"#263143","on-secondary-fixed-variant":"#384668","on-primary-container":"#ff888f","on-surface":"#111c2d","on-tertiary-fixed-variant":"#663e00","on-error-container":"#93000a","secondary-fixed":"#d9e2ff","on-tertiary-fixed":"#2b1700","outline-variant":"#ddc0c0","primary":"#5b0114","on-error":"#ffffff","surface-container-low":"#f0f3ff","on-primary-fixed-variant":"#84222e","error":"#ba1a1a","tertiary-container":"#5d3700","on-background":"#111c2d","on-secondary-container":"#4d5b7e","secondary-fixed-dim":"#b7c6ee","surface-tint":"#a33a44","primary-fixed":"#ffdada","secondary":"#4f5e81","on-primary":"#ffffff","surface-variant":"#d8e3fb","surface":"#f9f9ff","on-primary-fixed":"#40000b","surface-container-highest":"#d8e3fb","on-surface-variant":"#564242","on-secondary":"#ffffff","surface-container-high":"#dee8ff","tertiary":"#3e2400","surface-dim":"#cfdaf2","on-tertiary":"#ffffff","tertiary-fixed":"#ffddba","surface-container-lowest":"#ffffff","secondary-container":"#c5d4fd","tertiary-fixed-dim":"#ffb964","on-secondary-fixed":"#0a1a3a","on-tertiary-container":"#e79b38","primary-container":"#7a1b28","background":"#f9f9ff","surface-bright":"#f9f9ff","error-container":"#ffdad6","outline":"#897171"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-3xl":"4.5rem","space-lg":"1.5rem","space-xs":"0.5rem","space-2xl":"3rem","space-xl":"2rem","space-2xs":"0.25rem","container-max":"80rem","gutter-desktop":"1.5rem","gutter-mobile":"1rem","space-sm":"0.75rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["\"Source Serif 4\""],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display":["\"Source Serif 4\""],"headline-lg":["\"Source Serif 4\""],"headline-xl":["\"Source Serif 4\""],"label-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="UNICAP Extensão Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Plx-22JWT5Qus4ARoOkf1489xstW8uIZct4ASJ8TW_mGAOd36WU4pepryZe5N6Ee_PsFBL5BNYTXx8NiZyims8RFM9MytFrzGeyysmY3C4sUNSuVlW7kT_fKjwvksc7E0QEwcVJ6_jKw5xlZLYt4F4aR1JcqeP39bp-DvjXROeC4BvT6FmC5yYorWBh2_Sisu8TFpD8fFL1DvbOKf5V7BFIAtKF8XVWNAYnOv5w_YmbHly0TXWLj"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">UNICAP</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Extensão Comunitária</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-2xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Edital Vigente</span><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-variant font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>Aberto</span></div><span class="font-body-sm text-body-sm text-on-surface font-medium">PIBEX &amp; PROEXT 2024.2</span><span class="font-label-sm text-label-sm text-on-surface-variant">Prazo final: 24 de Novembro</span></div></div><nav class="flex flex-col gap-space-2xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="painel-gestor" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">dashboard</span><span class="font-label-lg text-label-lg">Painel Gestor</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="vitrine-publica" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">public</span><span class="font-label-lg text-label-lg">Vitrine Pública</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="submeter-projeto" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">post_add</span><span class="font-label-lg text-label-lg">Submeter Projeto</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-all group bg-primary-container text-on-primary font-semibold shadow-sm" data-path="acompanhamento" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">monitoring</span><span class="font-label-lg text-label-lg">Acompanhamento</span></a></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px]">help</span><span class="font-label-md text-label-md font-semibold">Central de Apoio</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Dúvidas sobre creditação curricular ou pareceres técnicos de extensão?</p><a class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold transition-colors flex items-center gap-1" href="mailto:extensao@unicap.br">Fale com a DEG <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant outline-none focus:ring-2 focus:ring-primary-container transition-all shadow-[0_1px_4px_rgba(0,0,0,0.03)]" placeholder="Buscar projetos, docentes coordenadores, ODS ou editais..." type="search"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificações" class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxAcA7OCPOEMSXa1oYPlRA4peyUXkVN6AK_OPRp4ENheCC3znn2mNf-K9HXKFIAC9B5FfG6ipie40rxQAlgpYJt_wcTxhikTsxL7GZDe1FZCvp9YM5bVLKSAsxmYb_uqntV9wxegFYtUWDQEtzV_CCyBwnpW3YNtRLgg-IDCuqLCtBv3uEmKRn_7FHvaRU1uNWOHMxzTytZE-jL2GekiXMV-HDqprJsv8Vi0jnQ2H8mL1sAU8KVzlW"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Profa. Dra. Ana Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Coordenação Geral de Extensão</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-xl py-space-lg"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Banner / Project Header Card -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-sm p-space-xl overflow-hidden flex flex-col gap-space-lg">
+<div class="absolute -right-16 -top-16 w-80 h-80 bg-primary/5 rounded-full pointer-events-none blur-2xl"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg relative z-10">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">tag</span>
+            Código: EXT-2025-042
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+            Status: Ativo / Em Execução Regular
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">school</span>
+            Edital PIBEX 2024-2025
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+            Vigência: Mar/2025 a Fev/2026
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight mt-space-2xs">
+          Clínica de Direitos Humanos e Cidadania Dom Helder Camara
+        </h1>
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant pt-space-2xs">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px] text-primary">person</span>
+<span class="font-body-md text-body-md"><strong class="font-semibold text-on-surface">Coordenadora:</strong> Profa. Dra. Ana Silva</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance</span>
+<span class="font-body-md text-body-md">Centro de Ciências Jurídicas (CCJ)</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-4 h-4 rounded-sm bg-primary-container text-on-primary flex items-center justify-center text-[10px] font-bold">16</span>
+            ODS 16: Paz, Justiça e Instituições Eficazes
+          </div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap lg:flex-col gap-space-xs shrink-0 self-start w-full sm:w-auto">
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+          Emitir Declaração do Projeto
+        </button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-low text-secondary hover:bg-surface-container-high font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+          Submeter Relatório Parcial
+        </button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+          Gerenciar Bolsistas
+        </button>
+</div>
+</div>
+<!-- Metrics Bar / Micro stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md pt-space-md bg-surface-container-low/60 rounded-xl p-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Carga Horária Aprovada</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">120h</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">semestrais</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">8h semanais por discente</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Equipe Discente</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">04</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">integrantes</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">2 Bolsistas PIBEX + 2 Voluntários</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Beneficiários Diretos</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">240+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">atendimentos</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">Comunidade Santo Amaro &amp; Coelhos</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Índice de Execução</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">66.7%</span>
+<div class="w-16 h-2 rounded-full bg-surface-container-highest overflow-hidden self-center">
+<div class="bg-primary h-full rounded-full" style="width: 66.7%"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">Cronograma rigorosamente em dia</span>
+</div>
+</div>
+</div>
+<!-- Tabs Navigation -->
+<nav aria-label="Abas de Gestão" class="flex items-center gap-space-xs overflow-x-auto pb-1">
+<button class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high transition-colors whitespace-nowrap flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+      Visão Geral &amp; Indicadores
+    </button>
+<button class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high transition-colors whitespace-nowrap flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+      Cronograma &amp; Atividades
+    </button>
+<button class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg bg-primary-container text-on-primary font-semibold shadow-sm whitespace-nowrap flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">school</span>
+      Bolsistas &amp; Frequência
+      <span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+</button>
+<button class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high transition-colors whitespace-nowrap flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+      Relatórios &amp; Pareceres
+    </button>
+<button class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high transition-colors whitespace-nowrap flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+      Comunidade &amp; Depoimentos
+    </button>
+</nav>
+<!-- Main Content Grid (Table + Timeline + Side Activity Panel) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl">
+<!-- Left & Center: Table + Milestones (8 cols) -->
+<div class="xl:col-span-8 flex flex-col gap-space-xl">
+<!-- Section: Bolsistas e Frequência Mensal -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Equipe Discente e Homologação de Frequência</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Competência de Referência: <strong class="text-on-surface font-medium">Março / 2025</strong> — Carga horária mensal esperada: 30h</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center gap-1.5" id="btn-homologar-todos" type="button">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+              Homologar Selecionados
+            </button>
+<button class="p-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Exportar Folha em PDF" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</button>
+</div>
+</div>
+<!-- Student Attendance Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest">
+<table class="w-full text-left text-on-surface border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<th class="py-3 px-space-md w-8"><input aria-label="Selecionar todos" class="rounded accent-primary" type="checkbox"/></th>
+<th class="py-3 px-space-md">Discente / Matrícula</th>
+<th class="py-3 px-space-sm">Curso</th>
+<th class="py-3 px-space-sm">Modalidade</th>
+<th class="py-3 px-space-sm">Progresso CH</th>
+<th class="py-3 px-space-sm">Folha Mar/25</th>
+<th class="py-3 px-space-md text-right">Ação / Parecer</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-md font-body-md">
+<!-- Student 1 -->
+<tr class="hover:bg-surface-container-low/80 transition-colors">
+<td class="py-3.5 px-space-md"><input aria-label="Selecionar Lucas Andrade" checked="" class="rounded accent-primary" type="checkbox"/></td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Close-up portrait of a young Brazilian male law student with neat dark hair and a confident, kind smile wearing a casual shirt inside a bright university library." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARSU9ojLbK1l-M_2cBuHXhUdBodYjzfSWw5KSCG-JpSATSquYDDv8a1QpghfKjV9y1teYNZomHz9jiTb3hoWYxs8ddCEL7FHb-f4fCbYOqJGM63Yqi-Ost_VCw4Zon4w67Bzy2f1-iGi3bqxBlhIULoDdgIbvgLJkWpLKNYtQlqKTrCsm_2gityG8bMihJsQBC-lIlA4Jd_WC8heQwfVbzC2F25GxbvkXB6WOGkW_5CuEVCcHTPhhF"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Lucas Andrade Bezerra</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mat. 2022104928</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direito (7º Per.)</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                    PIBEX (R$ 700)
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">80h</span>
+<span>120h</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 66.6%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+                    30h registradas
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Homologada
+                  </span>
+</td>
+</tr>
+<!-- Student 2 -->
+<tr class="hover:bg-surface-container-low/80 transition-colors">
+<td class="py-3.5 px-space-md"><input aria-label="Selecionar Mariana Albuquerque" checked="" class="rounded accent-primary" type="checkbox"/></td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Friendly young Afro-Brazilian female university student with stylish braided hair wearing a neutral beige cardigan against soft daylight in an academic setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmPqIYi5H7qkPI3VHikBSesSZAVpBB3TnWGuGOn9Ad797djP7jmc3DECefDRu0MBU1MMPkYF4HzNt7DAc7ex-FcpFHLN8WY78WzI_khSJHb0Xck_DFEtYrH6Uno6-YxvEKQATKVoqcKHe5S2UQZbqlUc7RRgXGjiQkYEopoKjMRfQXgQWNw4pOJbiLE0FzqG01E8IT3JTX3Cs30o6xJzsFMWpBJyLire_0xTOFZ2ycWhf8xSpT5FUs"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Mariana Albuquerque Lima</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mat. 2023101183</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direito (5º Per.)</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                    PIBEX (R$ 700)
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">78h</span>
+<span>120h</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+                    30h registradas
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">done</span>
+                    Homologar
+                  </button>
+</td>
+</tr>
+<!-- Student 3 -->
+<tr class="hover:bg-surface-container-low/80 transition-colors">
+<td class="py-3.5 px-space-md"><input aria-label="Selecionar Gabriela Dias" class="rounded accent-primary" type="checkbox"/></td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold text-sm">GD</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Gabriela Dias Vasconcelos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mat. 2021203419</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Serviço Social</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+                    Voluntária (Ext.)
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">60h</span>
+<span>120h</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+                    24h registradas
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">done</span>
+                    Homologar
+                  </button>
+</td>
+</tr>
+<!-- Student 4 -->
+<tr class="hover:bg-surface-container-low/80 transition-colors">
+<td class="py-3.5 px-space-md"><input aria-label="Selecionar Rafael Mendes" class="rounded accent-primary" type="checkbox"/></td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold text-sm">RM</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Rafael Mendes Gusmão</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mat. 2024109820</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jornalismo</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+                    Voluntário (Com.)
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">54h</span>
+<span>120h</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">schedule</span>
+                    Pendente envio
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-surface-container-low text-secondary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">mail</span>
+                    Cobrar Envio
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">info</span>
+<span class="font-body-sm text-body-sm">A folha homologada é enviada automaticamente para a Divisão Financeira até o dia 28 para liberação do estipêndio PIBEX.</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline whitespace-nowrap" href="#">Ver histórico de frequências</a>
+</div>
+</section>
+<!-- Section: Timeline & Marcos de Entrega -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">flag</span>
+              Linha do Tempo &amp; Marcos Acadêmicos
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Acompanhamento e prazos vinculados ao edital da PROPESP</p>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+            2 de 4 marcos atingidos
+          </span>
+</div>
+<div class="relative flex flex-col gap-space-lg pl-2">
+<!-- Continuous line behind items -->
+<div class="absolute left-7 top-4 bottom-4 w-0.5 bg-surface-container-highest"></div>
+<!-- Milestone 1: Concluído -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Seleção de Estudantes &amp; Assinatura dos Termos</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Concluído</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Homologação de 4 termos de compromisso de estágio extensionista na DEG.</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">15/03/2025</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2: Em Andamento -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-10 h-10 rounded-full bg-surface-tint text-on-primary flex items-center justify-center shrink-0 z-10 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">Início das Oficinas Comunitárias e Atendimento Jurídico</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Em Andamento</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Atendimentos semanais no Salão Paroquial Santo Amaro e no CCJ Unicap.</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-sm text-label-sm text-secondary font-medium">22/03 a 30/06/2025</span>
+</div>
+</div>
+</div>
+<!-- Milestone 3: Pendente / Próximo Prazo com Alerta -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center shrink-0 z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">notification_important</span>
+</div>
+<div class="flex-1 bg-surface-container-high p-space-md rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-bold text-on-surface">Submissão do Relatório Parcial de Atividades</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>
+                    Restam 45 dias
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Obrigatório para manutenção das bolsas PIBEX e validação de créditos de curricularização.</p>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Prazo: 15/07/2025</span>
+<button class="px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow" type="button">
+                  Iniciar Rascunho
+                </button>
+</div>
+</div>
+</div>
+<!-- Milestone 4: Futuro -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[20px]">award_star</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs opacity-75">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Avaliação Final no Salão de Extensão UNICAP</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Planejado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Apresentação de banner e artigo técnico no 27º Encontro de Extensão Comunitária.</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Novembro / 2025</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Mini Galeria Fotográfica das Ações de Campo -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">photo_library</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Registros de Campo &amp; Atendimentos</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold flex items-center gap-1" type="button">
+            Adicionar Fotos <span class="material-symbols-outlined text-[16px]">add_a_photo</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-high aspect-video flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="University law students conducting a legal counseling workshop in a community hall with local neighborhood leaders in Recife, warm natural light, engaged conversations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLz9a1zAt5fUnlpvEXS2JxrVQm5r9Z07kyYqWgPwmJtER_bqLjHhu_dIBqPaQ1Otm9b__xQdZAjGeouiVqbqL_BWUQa3smG7VCnJsEGnI2Bh5BL79KU1dEeA_JEBYNCvq1dQKXx4pmuyi-5x-K6RvjEz6pJag4Wt1oDrWLqG4a8yaUU7tLOn6P-ua0U0va_UKbOfeZX2OfMS7jPQeW6U_z0u_FxRrq0ez4CG8deJSKaQJWC5Rb4-9_"/>
+<div class="relative p-space-sm bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+<span class="font-label-sm text-label-sm font-semibold">Oficina Comunitária Santo Amaro</span>
+<span class="block font-body-sm text-body-sm text-white/80">26/03/2025 • 42 participantes</span>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-high aspect-video flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Female law professor supervising student consultants assisting an elderly citizen with legal documentation in a bright university clinic room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPbVQ2cLqy7vyB_Hvn7tfpI3k4Og9A9v-tTTKAomuAGyMfe0ByKVMTcN9N5ESDiLrqnkDgwvZC1MHiQ4FcmuH2EONnpKxbUaKR_L3D1Lb2AkjaNFPArgDcwhKsnhgjQ17h1XOyWRqTU2m5kmdZhKq2GbOwsD3Tq5xYclj_WPI9yejq2Aolu4WDBUoiC3mv-G7yEgL3kWagmkClF9LG5uRIn7XtsLSTi-O1JVeOqkKxmrJy8t2Bko8o"/>
+<div class="relative p-space-sm bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+<span class="font-label-sm text-label-sm font-semibold">Plantão Jurídico Comunitário</span>
+<span class="block font-body-sm text-body-sm text-white/80">02/04/2025 • CCJ Unicap</span>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-high aspect-video flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Group of diverse Brazilian university students and community partners holding educational rights pamphlets outside an urban civic community center in Recife." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC89y-2lAV6F_UCp1zF2s5Jj5er6Z4H38MRBhUEKUGN1boKzE5ROL2VpzuvvZps4Xit1RFInHWQC-cgzMltMOKfyNCOP8mQNwY677fcLcBDQdqkAaREaoSqKeHpPCE_ijo4VrDfIm59_TPR_09Gc8fpPK-VJAayDq3JJOB_pGdfMH757zC8gqb8EmWe32PmF13WM5lrC-sCA6LQZSvAoIrF9uNkJRlRMnxCtT9LVKLpEGafWzuWYMMs"/>
+<div class="relative p-space-sm bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+<span class="font-label-sm text-label-sm font-semibold">Distribuição de Cartilhas Cidadãs</span>
+<span class="block font-body-sm text-body-sm text-white/80">09/04/2025 • Bairro dos Coelhos</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Notifications, Curricularization Guide & Evaluator Chat (4 cols) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Curricularization & Creditation Widget -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[22px]">auto_stories</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Curricularização (Res. CNE/CES 07/2018)</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Este projeto integra a matriz de extensão curricularizada obrigatória (10% da carga horária) dos cursos envolvidos:
+        </p>
+<div class="flex flex-col gap-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Direito Bacharelado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Componente: Prática Jurídica Ext. I</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-bold">60h validadas</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Serviço Social</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Componente: Direitos Sociais e Cidadania</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-bold">60h validadas</span>
+</div>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold flex items-center gap-1 mt-1" href="#">
+          Consultar Diretrizes de Integralização <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+<!-- Coordination Feed / Notifications -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">campaign</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Avisos da Coordenação</h3>
+</div>
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+</div>
+<div class="flex flex-col divide-y-0 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">Divisão Geral de Extensão (DEG)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hoje, 09:14</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Lembrete: O prazo limite para homologação das frequências de Março/2025 encerra-se em 25/04 às 23h59.
+            </p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary">Comitê de Ética em Pesquisa (CEP)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14/04/2025</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Parecer consubstanciado nº 5.892.11 aprovado sem pendências para os questionários de acolhimento comunitário.
+            </p>
+</div>
+</div>
+</div>
+<!-- Evaluator Direct Channel / Messenger -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">support_agent</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Canal Direto com Parecerista</h3>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of an experienced academic professor with glasses and silver hair in professional attire, friendly demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcaLfR5HoBpSyxGQOSLb71uFdLRW7tH3glTRRXwZ98tULPU3yN4fB17v8ZzCWV9EO5quG5WhYhLsuvg6OVGlboQDaqP83KRtS_KDSUs5NkiEULjxUVnvFe91qL3KWO9Knw0RGc0rjMEaGi7umlS6rkkKZvBafe6otQAJbkObIpi-MeYjfz9dTd3xTzSqr_c_DCy-IGQ0-i3asGjlZ0-5uiab4nLtfuxuC5lApYaiMWnDXyg-ovyefD"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Prof. Dr. Marcelo Tavares</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Parecerista Técnico Designado (CCJ)</span>
+</div>
+</div>
+<!-- Chat history snippet -->
+<div class="flex flex-col gap-space-xs max-h-48 overflow-y-auto p-1 text-body-sm">
+<div class="bg-surface-container p-space-sm rounded-xl self-start max-w-[88%] text-on-surface">
+<span class="font-label-sm text-label-sm block text-on-surface-variant font-semibold">Prof. Marcelo • 10/04</span>
+            Profa. Ana, parabéns pelo plano de trabalho. Sugiro apenas detalhar na metodologia o transporte dos alunos para o Bairro dos Coelhos.
+          </div>
+<div class="bg-primary-container p-space-sm rounded-xl self-end max-w-[88%] text-on-primary">
+<span class="font-label-sm text-label-sm block text-on-primary-container font-semibold">Você • 10/04</span>
+            Agradeço a pontuação, professor! Já anexamos a declaração de apoio logístico da Pró-Reitoria de Comunidade.
+          </div>
+</div>
+<!-- Chat input -->
+<div class="relative flex items-center mt-space-2xs">
+<input class="w-full h-10 pl-3 pr-10 rounded-xl bg-surface-container-low text-body-sm font-body-sm text-on-surface outline-none focus:bg-surface-container transition-all" placeholder="Escreva uma mensagem para o parecerista..." type="text"/>
+<button aria-label="Enviar mensagem" class="absolute right-1 w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for attendance batch homologation
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnHomologarTodos = document.getElementById('btn-homologar-todos');
+    if (btnHomologarTodos) {
+      btnHomologarTodos.addEventListener('click', () => {
+        btnHomologarTodos.classList.add('bg-primary', 'text-on-primary');
+        btnHomologarTodos.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> Todos Homologados';
+        setTimeout(() => {
+          btnHomologarTodos.classList.remove('bg-primary', 'text-on-primary');
+          btnHomologarTodos.innerHTML = '<span class="material-symbols-outlined text-[16px]">done_all</span> Homologar Selecionados';
+        }, 3000);
+      });
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)] mt-auto"><div class="w-full px-space-xl py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-md"><span class="font-label-md text-label-md text-on-surface font-semibold">UNICAP • Universidade Católica de Pernambuco</span><span class="hidden md:inline font-body-sm text-body-sm text-outline">|</span><span class="font-body-sm text-body-sm">Pró-Reitoria de Pesquisa, Pós-Graduação e Extensão (PROPESP)</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><span>Rua do Príncipe, 526, Boa Vista, Recife - PE</span><a class="text-primary hover:text-primary-container transition-colors" href="#">Normativas Acadêmicas</a><a class="text-primary hover:text-primary-container transition-colors" href="#">Portal Institucional</a></div></div></footer></div></body></html>
