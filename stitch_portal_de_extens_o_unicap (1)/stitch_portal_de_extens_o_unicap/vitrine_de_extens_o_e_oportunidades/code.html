@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UNICAP - Portal de Extensão Universitária</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#ecf1ff","inverse-primary":"#ffb3b5","primary-fixed-dim":"#ffb3b5","surface-container":"#e7eeff","inverse-surface":"#263143","on-secondary-fixed-variant":"#384668","on-primary-container":"#ff888f","on-surface":"#111c2d","on-tertiary-fixed-variant":"#663e00","on-error-container":"#93000a","secondary-fixed":"#d9e2ff","on-tertiary-fixed":"#2b1700","outline-variant":"#ddc0c0","primary":"#5b0114","on-error":"#ffffff","surface-container-low":"#f0f3ff","on-primary-fixed-variant":"#84222e","error":"#ba1a1a","tertiary-container":"#5d3700","on-background":"#111c2d","on-secondary-container":"#4d5b7e","secondary-fixed-dim":"#b7c6ee","surface-tint":"#a33a44","primary-fixed":"#ffdada","secondary":"#4f5e81","on-primary":"#ffffff","surface-variant":"#d8e3fb","surface":"#f9f9ff","on-primary-fixed":"#40000b","surface-container-highest":"#d8e3fb","on-surface-variant":"#564242","on-secondary":"#ffffff","surface-container-high":"#dee8ff","tertiary":"#3e2400","surface-dim":"#cfdaf2","on-tertiary":"#ffffff","tertiary-fixed":"#ffddba","surface-container-lowest":"#ffffff","secondary-container":"#c5d4fd","tertiary-fixed-dim":"#ffb964","on-secondary-fixed":"#0a1a3a","on-tertiary-container":"#e79b38","primary-container":"#7a1b28","background":"#f9f9ff","surface-bright":"#f9f9ff","error-container":"#ffdad6","outline":"#897171"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-3xl":"4.5rem","space-lg":"1.5rem","space-xs":"0.5rem","space-2xl":"3rem","space-xl":"2rem","space-2xs":"0.25rem","container-max":"80rem","gutter-desktop":"1.5rem","gutter-mobile":"1rem","space-sm":"0.75rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["\"Source Serif 4\""],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display":["\"Source Serif 4\""],"headline-lg":["\"Source Serif 4\""],"headline-xl":["\"Source Serif 4\""],"label-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="UNICAP Extensão Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Plx-22JWT5Qus4ARoOkf1489xstW8uIZct4ASJ8TW_mGAOd36WU4pepryZe5N6Ee_PsFBL5BNYTXx8NiZyims8RFM9MytFrzGeyysmY3C4sUNSuVlW7kT_fKjwvksc7E0QEwcVJ6_jKw5xlZLYt4F4aR1JcqeP39bp-DvjXROeC4BvT6FmC5yYorWBh2_Sisu8TFpD8fFL1DvbOKf5V7BFIAtKF8XVWNAYnOv5w_YmbHly0TXWLj"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">UNICAP</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Extensão Comunitária</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-2xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Edital Vigente</span><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-variant font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>Aberto</span></div><span class="font-body-sm text-body-sm text-on-surface font-medium">PIBEX &amp; PROEXT 2024.2</span><span class="font-label-sm text-label-sm text-on-surface-variant">Prazo final: 24 de Novembro</span></div></div><nav class="flex flex-col gap-space-2xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="painel-gestor" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">dashboard</span><span class="font-label-lg text-label-lg">Painel Gestor</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-all group bg-primary-container text-on-primary font-semibold shadow-sm" data-path="vitrine-publica" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">public</span><span class="font-label-lg text-label-lg">Vitrine Pública</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="submeter-projeto" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">post_add</span><span class="font-label-lg text-label-lg">Submeter Projeto</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="acompanhamento" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">monitoring</span><span class="font-label-lg text-label-lg">Acompanhamento</span></a></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px]">help</span><span class="font-label-md text-label-md font-semibold">Central de Apoio</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Dúvidas sobre creditação curricular ou pareceres técnicos de extensão?</p><a class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold transition-colors flex items-center gap-1" href="mailto:extensao@unicap.br">Fale com a DEG <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant outline-none focus:ring-2 focus:ring-primary-container transition-all shadow-[0_1px_4px_rgba(0,0,0,0.03)]" placeholder="Buscar projetos, docentes coordenadores, ODS ou editais..." type="search"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificações" class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxAcA7OCPOEMSXa1oYPlRA4peyUXkVN6AK_OPRp4ENheCC3znn2mNf-K9HXKFIAC9B5FfG6ipie40rxQAlgpYJt_wcTxhikTsxL7GZDe1FZCvp9YM5bVLKSAsxmYb_uqntV9wxegFYtUWDQEtzV_CCyBwnpW3YNtRLgg-IDCuqLCtBv3uEmKRn_7FHvaRU1uNWOHMxzTytZE-jL2GekiXMV-HDqprJsv8Vi0jnQ2H8mL1sAU8KVzlW"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Profa. Dra. Ana Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Coordenação Geral de Extensão</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-xl py-space-lg"><div class="flex flex-col w-full">
+<section class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary-container to-tertiary-container text-on-primary shadow-xl p-space-xl md:p-space-3xl mb-space-2xl">
+<div class="absolute -right-16 -top-20 w-96 h-96 rounded-full bg-secondary-fixed/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-tertiary-fixed/15 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-md self-start text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]">volunteer_activism</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Transformação Social • Recife e RMR</span>
+</div>
+<h1 class="font-display text-display leading-tight tracking-tight text-on-primary">
+        Conectando a UNICAP à Comunidade: Participe de Nossos Projetos de Extensão
+      </h1>
+<p class="font-body-lg text-body-lg text-surface-container-low/90 max-w-2xl">
+        A extensão universitária é a ponte viva que une conhecimento científico, vocação humanista e cidadania participativa. Descubra bolsas ativas, cursos gratuitos e ações de impacto real nos territórios de Pernambuco.
+      </p>
+<div class="mt-space-md bg-surface-container-lowest text-on-surface p-space-xs rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-space-xs">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs flex-1 w-full">
+<span class="material-symbols-outlined text-primary text-[24px]">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant outline-none" id="searchInput" oninput="filtrarProjetos()" placeholder="Busque por área, curso, bairro ou palavra-chave..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto px-space-xs">
+<div class="h-8 w-px bg-surface-container hidden md:block"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-space-xs hidden lg:inline">Recife / RMR</span>
+<button class="w-full md:w-auto px-space-xl py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs cursor-pointer" onclick="aplicarBuscaHero()" type="button">
+<span>Explorar Oportunidades</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs text-surface-container-low font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>+130 Projetos em andamento</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>Creditação curricular garantida (ACCs)</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>Serviços 100% gratuitos à população</span>
+</div>
+</div>
+</section>
+<section class="mb-space-xl">
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-low p-1.5 rounded-2xl shadow-sm">
+<button class="tab-btn active px-space-lg py-space-sm rounded-xl font-label-lg text-label-lg transition-all bg-primary-container text-on-primary font-semibold shadow-sm" onclick="selecionarAba(this, 'todos')">
+        Todas as Oportunidades
+      </button>
+<button class="tab-btn px-space-lg py-space-sm rounded-xl font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-medium" onclick="selecionarAba(this, 'estudantes')">
+        Vagas para Estudantes (Bolsas e Voluntariado)
+      </button>
+<button class="tab-btn px-space-lg py-space-sm rounded-xl font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-medium" onclick="selecionarAba(this, 'comunidade')">
+        Inscrições Abertas para a Comunidade (Cursos e Oficinas)
+      </button>
+<button class="tab-btn px-space-lg py-space-sm rounded-xl font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-medium" onclick="selecionarAba(this, 'destaques')">
+        Projetos em Destaque
+      </button>
+<button class="tab-btn px-space-lg py-space-sm rounded-xl font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-medium" onclick="selecionarAba(this, 'parcerias')">
+        Parcerias com ONGs e Empresas
+      </button>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl mb-space-3xl">
+<aside class="lg:col-span-3 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Filtros Avançados</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" onclick="limparFiltros()">Limpar</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Área Temática</label>
+<select class="h-10 px-space-sm rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface outline-none cursor-pointer" id="filterArea" onchange="filtrarProjetos()">
+<option value="">Todas as áreas</option>
+<option value="Direitos Humanos">Direitos Humanos &amp; Justiça</option>
+<option value="Inclusao Digital">Inclusão Digital &amp; Educação</option>
+<option value="Saude Comunitaria">Saúde Comunitária</option>
+<option value="Cultura Popular">Cultura e Memória Urbana</option>
+<option value="Empreendedorismo">Empreendedorismo &amp; Gestão</option>
+<option value="Sustentabilidade">Sustentabilidade &amp; Meio Ambiente</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Território / Modalidade</label>
+<select class="h-10 px-space-sm rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface outline-none cursor-pointer" id="filterLocal" onchange="filtrarProjetos()">
+<option value="">Todos os locais</option>
+<option value="Boa Vista">Campus Boa Vista (Presencial)</option>
+<option value="Santo Amaro">Bairro Santo Amaro</option>
+<option value="Soledade">Comunidade da Soledade</option>
+<option value="Recife Antigo">Bairro do Recife Antigo</option>
+<option value="Hibrido">Formato Híbrido</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Turno / Horário</label>
+<div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<label class="flex items-center gap-2 cursor-pointer hover:text-on-surface">
+<input class="rounded accent-primary" name="turno" onchange="filtrarProjetos()" type="checkbox" value="manha"/> Manhã (08:00 - 12:00)
+            </label>
+<label class="flex items-center gap-2 cursor-pointer hover:text-on-surface">
+<input class="rounded accent-primary" name="turno" onchange="filtrarProjetos()" type="checkbox" value="tarde"/> Tarde (13:30 - 17:30)
+            </label>
+<label class="flex items-center gap-2 cursor-pointer hover:text-on-surface">
+<input class="rounded accent-primary" name="turno" onchange="filtrarProjetos()" type="checkbox" value="noite"/> Noite (18:30 - 21:30)
+            </label>
+<label class="flex items-center gap-2 cursor-pointer hover:text-on-surface">
+<input class="rounded accent-primary" name="turno" onchange="filtrarProjetos()" type="checkbox" value="sabados"/> Sábados Letivos
+            </label>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Certificação Acadêmica</label>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Horas ACCs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Válidas para graduação</span>
+</div>
+<input class="w-5 h-5 rounded accent-primary cursor-pointer" id="filtroAcc" onchange="filtrarProjetos()" type="checkbox"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Alinhamento aos ODS da ONU</label>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container font-label-sm text-label-sm text-on-surface-variant rounded-lg cursor-pointer hover:bg-secondary-container transition-colors">ODS 2 • Fome Zero</span>
+<span class="px-2 py-1 bg-surface-container font-label-sm text-label-sm text-on-surface-variant rounded-lg cursor-pointer hover:bg-secondary-container transition-colors">ODS 3 • Saúde</span>
+<span class="px-2 py-1 bg-surface-container font-label-sm text-label-sm text-on-surface-variant rounded-lg cursor-pointer hover:bg-secondary-container transition-colors">ODS 4 • Educação</span>
+<span class="px-2 py-1 bg-surface-container font-label-sm text-label-sm text-on-surface-variant rounded-lg cursor-pointer hover:bg-secondary-container transition-colors">ODS 5 • Igualdade</span>
+<span class="px-2 py-1 bg-surface-container font-label-sm text-label-sm text-on-surface-variant rounded-lg cursor-pointer hover:bg-secondary-container transition-colors">ODS 10 • Desigualdades</span>
+<span class="px-2 py-1 bg-surface-container font-label-sm text-label-sm text-on-surface-variant rounded-lg cursor-pointer hover:bg-secondary-container transition-colors">ODS 16 • Paz &amp; Justiça</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-space-lg rounded-2xl flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span class="font-label-lg text-label-lg font-semibold">Cronograma 2024.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Período único de inscrição com validação automática de histórico acadêmico no Portal do Aluno.
+        </p>
+<div class="flex flex-col gap-space-2xs text-label-sm font-label-sm text-on-surface">
+<span class="font-semibold text-primary">Abertura: 10 de Outubro</span>
+<span>Encerramento Bolsas: 24 de Novembro</span>
+<span>Início das Atividades: 02 de Dezembro</span>
+</div>
+</div>
+</aside>
+<main class="lg:col-span-9 flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Oportunidades Disponíveis</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="contadorResultados">Exibindo 6 projetos com editais ativos</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ordenar por:</span>
+<select class="bg-surface-container-lowest font-body-sm text-body-sm text-on-surface py-1.5 px-3 rounded-xl shadow-sm outline-none cursor-pointer">
+<option>Prazos mais próximos</option>
+<option>Maior número de horas ACC</option>
+<option>Relevância institucional</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" id="gridCards">
+<article class="projeto-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-acc="true" data-area="Direitos Humanos" data-categoria="estudantes destaques" data-local="Soledade">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Estudantes de direito e cidadãos reunidos em atendimento jurídico comunitário no bairro da Soledade, Recife, luz acolhedora da tarde, estilo documental humanista, tons de terracota e azul noturno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD314TGupwBhCJTg5yfDiEEj_z3l3jXrRRB3TklrYSV8ipzeb1aIfg2VHYRLvNX69CGmqU7bFvFUR7EmF7eZEMx6t4XszAUMtEM7mAbD79NbEZYmgUIH6j14ECRjjWDV8HAb6w6mrrEXanqimx_52lD88CkbLrnYns_VZeejOIH2sI1Ymx4ghnADx6sulBKzoFZVeJjUfNNzndFn_VE5FkM9SVtFrdxPI-2hfs2SgxKpiIB0v2v1o9O"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-md">
+                Bolsa PIBEX Remunerada
+              </span>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-xl font-label-sm text-label-sm text-on-surface flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+              60h ACCs
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 10 • Redução Desigualdades</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 16 • Paz e Justiça</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Clínica de Direitos Humanos e Cidadania Dom Helder Camara
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Atendimento jurídico gratuito e orientação processual a famílias em situação de vulnerabilidade habitacional e violação de garantias civis bsicas.
+              </p>
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span>Cursos: Direito • Serviço Social</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Local: Centro Social Soledade / Campus UNICAP</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Inscrições até 24 de Novembro de 2024</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> 4 Vagas restantes
+              </span>
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all flex items-center gap-1 cursor-pointer" onclick="abrirModalDetalhes('Clínica de Direitos Humanos Dom Helder Camara', 'Direito e Serviço Social', '60 horas ACCs', 'Bolsa PIBEX Remunerada', 'Comunidade da Soledade e Boa Vista')" type="button">
+<span>Inscrever-se</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<article class="projeto-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-acc="true" data-area="Inclusao Digital" data-categoria="comunidade estudantes destaques" data-local="Santo Amaro">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Idosos sorridentes aprendendo a utilizar smartphones e computadores em laboratório universitário iluminado acompanhados por jovens monitores pacientes, tons suaves, calor humano" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGhC9NIES3XMpakj_PweMout0pzQvX238efQBsFwwYXkSvWIqYXie745a6UHpwaOytLGX1cZshUJcyrFMSaaS9OI957jO_BNMXNccyOWthjRkjMIYN-2NZMBN0Ulpp45cptRti5oh4KG7ftmXHqsaaTWKOzBhlyBlUJcV3U7s5t0e-HWwqrn-6v3xYWwIUD5ZjCa1IJURXlOLM5JFJd5KgpyDgNBEeraPzib7Pe9VO0czAtsiVz2UT"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold shadow-md">
+                Inscrição Gratuita Comunidade
+              </span>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-xl font-label-sm text-label-sm text-on-surface flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+              40h ACCs
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 4 • Educação de Qualidade</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 9 • Inovação</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Inclusão Digital para Terceira Idade em Santo Amaro
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Oficinas práticas de alfabetização tecnológica, segurança contra golpes online e uso de aplicativos bancários para o público 60+.
+              </p>
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span>Cursos: Ciência da Computação • Pedagogia</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Local: Laboratório de Informática G2 / Santo Amaro</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Turno: Terças e Quintas, 14h às 16h30</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 15 vagas abertas comunidade
+              </span>
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all flex items-center gap-1 cursor-pointer" onclick="abrirModalDetalhes('Inclusão Digital para Terceira Idade', 'Computação e Pedagogia', '40 horas ACCs', 'Oficinas Gratuitas', 'Bairro de Santo Amaro')" type="button">
+<span>Inscrever-se</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<article class="projeto-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-acc="true" data-area="Saude Comunitaria" data-categoria="estudantes comunidade" data-local="Boa Vista">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Profissionais de saúde e estudantes de psicologia em escuta comunitária acolhedora dentro da Clínica-Escola da UNICAP, ambiente calmo, iluminação natural suave" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWctKF0Y7hMn_o3H4x5mx_GmiiFw_N5Q74ZXtKwJBFopG74OOFtkPayYAJTfjRFmyWqsaMTp-AgI9FnCQN3SFjxmRFjn4JAZMPY5c8GRx3Yzt3upPLEbojE9V-3O-G7MEG8kHf7bexZTmjb4u-aYXy6ilQViGgSCfadqFQ-fNj1oTAW41ZNTq9c8U89F8L5F4vVy6G52Kptt9yMxm_il-pWNNlNojBwq6hGh1zykIIL3bGkujFVDmR"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-md">
+                Bolsa PIBEX • Saúde
+              </span>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-xl font-label-sm text-label-sm text-on-surface flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+              80h ACCs
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 3 • Saúde e Bem-Estar</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Atenção Psicológica e Saúde Integrada nas Comunidades
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Plantão psicológico, grupos de apoio em saúde mental pós-crises e sessões de reabilitação física postural preventiva no centro da cidade.
+              </p>
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span>Cursos: Psicologia • Fisioterapia</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Local: Clínica-Escola UNICAP • Boa Vista</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Plantão: Segundas a Sextas • Manhã/Tarde</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span> 22 Pacientes atendidos/dia
+              </span>
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all flex items-center gap-1 cursor-pointer" onclick="abrirModalDetalhes('Atenção Psicológica e Saúde Integrada', 'Psicologia e Fisioterapia', '80 horas ACCs', 'Bolsa PIBEX / Acolhimento Comunitário', 'Campus Boa Vista')" type="button">
+<span>Inscrever-se</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<article class="projeto-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-acc="true" data-area="Cultura Popular" data-categoria="destaques parcerias" data-local="Recife Antigo">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Patrimônio histórico do Recife Antigo, ruas de paralelepípedos com casario colonial colorido, jovens pesquisadores documentando mestres do frevo e maracatu em estúdio aberto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbEmwNv7VwA085N54TI_SBffq8kW35NbL9UxtT5oi-QTosumKwlgHY6NqA2GTP-cJZ5bP0jqiOeqvYav5d187pDDLaaVnLgFhz_0wq6N1owHvpwxv8Ab_uLQhBGuE9hUqiXis0q3yqO-oxcJvcnhi-LtZ1pnL90Wceh53rFFazah4Ofs6ItSoSaKP59s2_0YNEHZFJrgt7As0tWg_pqOZYr0mowBYOCe7c2UJ7Yd74E_UVeVPBczfw"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-semibold shadow-md">
+                Parceria Fundação de Cultura
+              </span>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-xl font-label-sm text-label-sm text-on-surface flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+              50h ACCs
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 11 • Cidades Sustentáveis</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Mapeamento e Valorização da Cultura Popular do Recife Antigo
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Documentação oral, produção de podcasts etnográficos e rotas turísticas colaborativas com agremiações carnavalescas tradicionais.
+              </p>
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span>Cursos: História • Jornalismo • Artes Visuais</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Local: Bairro do Recife Antigo • Marco Zero</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Ações de Campo aos Sábados pela Manhã</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Voluntariado &amp; Bolsa
+              </span>
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all flex items-center gap-1 cursor-pointer" onclick="abrirModalDetalhes('Mapeamento da Cultura Popular', 'História, Jornalismo e Artes', '50 horas ACCs', 'Patrimônio Imaterial', 'Recife Antigo')" type="button">
+<span>Inscrever-se</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<article class="projeto-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-acc="true" data-area="Empreendedorismo" data-categoria="comunidade parcerias" data-local="Hibrido">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Mulheres microempreendedoras periféricas participando de mentoria prática de finanças e precificação de artesanato e culinária, atmosfera otimista e acolhedora" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-oPnC-PLMhl02Fcqo6XORLGEipbBWTKwevUSieR9_Uoeuh9gzd5vA3rIbDq_TohOc0Alz4--XG74GFWpsgUnGHI6Ete--8DtuzkmPNMHGckm1udGshwoLmuoOJYcxikyPK9jl9SmQOuGTF6Qy1ntmTnN5F90_ITfztcrwrrAHklIRg0DyilMfr7EX2kEbJmUDX_xIJ72TjYpdt2dC_JSkEqqNlHzpFFcGu0JLnR7X7SdYLyTadLna"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold shadow-md">
+                Inscrição Gratuita Comunidade
+              </span>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-xl font-label-sm text-label-sm text-on-surface flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+              45h ACCs
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 5 • Igualdade de Gênero</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 8 • Trabalho Decente</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Educação Financeira e Empreendedorismo Feminino Periférico
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Capacitação em fluxo de caixa, formalização MEI e precificação justa para lideranças femininas de comunidades do Grande Recife.
+              </p>
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span>Cursos: Administração • Ciências Econômicas</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Formato: Híbrido (Aulas online + Encontros no Campus)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Turno: Quartas-feiras • Noite (19h às 21h)</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 30 Vagas abertas
+              </span>
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all flex items-center gap-1 cursor-pointer" onclick="abrirModalDetalhes('Educação Financeira Feminina', 'Administração e Economia', '45 horas ACCs', 'Curso de Formação', 'Híbrido')" type="button">
+<span>Inscrever-se</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<article class="projeto-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group" data-acc="true" data-area="Sustentabilidade" data-categoria="estudantes destaques" data-local="Soledade">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Crianças de escola pública e universitários cuidando juntos de uma horta urbana comunitária verde exuberante sob o sol da manhã em Recife, plantas medicinais e hortaliças" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqdB9MpR9Bn1lMTMW1kgzJA9fZqsFi6hksm9AZWIvWaPc9KwnqbiGp0C8uZ7qfcQOPMV1-01wFYM9nRLu3zL1PhLXXaz36Awg809WdNbg4M4MyZuWFTk2mzlGgODsfS-sK1ZIJQl0Moq-JVykuiWbDf3YswoKG_Vfmmv7ZJHrA_wTtfns8zUoGCuwxJB0jeDZWCqrYWCqYuKkkAoNIh0fSolPZudp9E0eVTzU7o_znS2YVrWcqQz42"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-md">
+                Bolsa PIBEX Remunerada
+              </span>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-xl font-label-sm text-label-sm text-on-surface flex items-center gap-1 shadow">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+              70h ACCs
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">ODS 2 • Fome Zero &amp; Agroecologia</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Observatório de Segurança Alimentar e Hortas Urbanas Escolares
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Instalação de canteiros agroecológicos em escolas municipais e oficinas nutricionais de aproveitamento integral de alimentos regionais.
+              </p>
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span>Cursos: Nutrição • Ciências Biológicas</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Local: Escolas Parceiras na Soledade e Santo Amaro</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Acompanhamento: Terças e Quintas Manhã</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> 2 Bolsas disponíveis
+              </span>
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all flex items-center gap-1 cursor-pointer" onclick="abrirModalDetalhes('Hortas Urbanas e Segurança Alimentar', 'Nutrição e Ciências Biológicas', '70 horas ACCs', 'Bolsa PIBEX Remunerada', 'Escolas da Soledade')" type="button">
+<span>Inscrever-se</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+</div>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl mb-space-3xl items-stretch">
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">quiz</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Perguntas Frequentes</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-md">
+          Dúvidas Comuns da Comunidade e dos Estudantes
+        </h3>
+<div class="flex flex-col gap-space-sm">
+<details class="group bg-surface-container-low rounded-xl p-space-md cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg font-semibold text-on-surface list-none">
+<span>Quem não é aluno da UNICAP pode se inscrever nos cursos?</span>
+<span class="material-symbols-outlined text-[20px] text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs mt-space-xs border-t border-surface-container">
+              Sim! Todos os cursos com a etiqueta “Inscrição Gratuita Comunidade” são 100% abertos a qualquer cidadão, sem custo de matrícula ou mensalidade, emitindo certificado de extensão registrado pela UNICAP.
+            </p>
+</details>
+<details class="group bg-surface-container-low rounded-xl p-space-md cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg font-semibold text-on-surface list-none">
+<span>Como funciona a creditação de horas de ACC para estudantes?</span>
+<span class="material-symbols-outlined text-[20px] text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs mt-space-xs border-t border-surface-container">
+              Ao concluir a carga horária com 75% de frequência mínima e entrega do relatório pelo orientador, o sistema PROPESP credita automaticamente as horas no histórico acadêmico do aluno.
+            </p>
+</details>
+<details class="group bg-surface-container-low rounded-xl p-space-md cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg font-semibold text-on-surface list-none">
+<span>Qual é o valor da bolsa PIBEX e a carga horária semanal?</span>
+<span class="material-symbols-outlined text-[20px] text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs mt-space-xs border-t border-surface-container">
+              As bolsas institucionais de extensão possuem vigência de 10 meses com remuneração padrão de R$ 700,00 mensais para uma dedicação média de 12 a 20 horas semanais flexíveis.
+            </p>
+</details>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">support_agent</span>
+<span class="font-body-sm text-body-sm">
+          Ainda com dúvidas? Entre em contato pelo e-mail <a class="text-primary font-semibold underline" href="mailto:extensao@unicap.br">extensao@unicap.br</a>.
+        </span>
+</div>
+</div>
+<div class="lg:col-span-6 bg-gradient-to-br from-surface-container-lowest to-surface-container-low p-space-xl rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">handshake</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Parcerias Estratégicas</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xs">
+          Seja uma Instituição Parceira
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+          ONGs, associações de bairro, órgãos públicos e empresas podem submeter propostas conjuntas para receber estudantes, docentes e infraestrutura universitária.
+        </p>
+<form class="flex flex-col gap-space-sm" id="parceriaForm" onsubmit="enviarParceria(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Nome da Organização</label>
+<input class="h-10 px-space-sm rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface outline-none shadow-sm focus:ring-2 focus:ring-primary" placeholder="Ex: Associação Moradores Santo Amaro" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Tipo de Entidade</label>
+<select class="h-10 px-space-sm rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface outline-none shadow-sm focus:ring-2 focus:ring-primary cursor-pointer">
+<option>Organização Social (ONG / OSC)</option>
+<option>Órgão Público Municipal / Estadual</option>
+<option>Empresa Privada / ESG</option>
+<option>Coletivo Cultural / Comunitário</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">E-mail Institucional</label>
+<input class="h-10 px-space-sm rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface outline-none shadow-sm focus:ring-2 focus:ring-primary" placeholder="contato@organizacao.org.br" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Telefone / WhatsApp</label>
+<input class="h-10 px-space-sm rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface outline-none shadow-sm focus:ring-2 focus:ring-primary" placeholder="(81) 98888-0000" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Descrição da Demanda Comunitária</label>
+<textarea class="p-space-sm rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface outline-none shadow-sm focus:ring-2 focus:ring-primary resize-none" placeholder="Explique brevemente o desafio que vocês desejam enfrentar em conjunto com os cursos da UNICAP..." required="" rows="3"></textarea>
+</div>
+<button class="mt-space-xs h-11 px-space-xl bg-primary text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs cursor-pointer" type="submit">
+<span>Submeter Proposta de Parceria</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+<div class="hidden mt-space-md p-space-sm bg-secondary-container text-on-secondary-fixed font-body-sm text-body-sm rounded-xl flex items-center gap-2" id="msgSucessoParceria">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Demanda enviada com sucesso! A Coordenação de Parcerias retornará em até 5 dias úteis.</span>
+</div>
+</div>
+</section>
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-space-md bg-inverse-surface/60 backdrop-blur-sm" id="modalInscricao">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl shadow-2xl p-space-xl flex flex-col gap-space-md relative animate-in fade-in zoom-in-95 duration-200">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface p-1 rounded-lg" onclick="fecharModalDetalhes()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Inscrição em Edital Ativo</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold leading-tight" id="modalTitulo"></h3>
+<span class="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium" id="modalModalidade"></span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="font-medium">Público-Alvo / Cursos:</span>
+<span class="text-on-surface font-semibold text-right" id="modalCursos"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Certificação:</span>
+<span class="text-on-surface font-semibold" id="modalAcc"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Localização:</span>
+<span class="text-on-surface font-semibold" id="modalLocal"></span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Vínculo de Acesso:</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-space-xs rounded-xl bg-surface-container-low text-label-sm font-label-sm text-on-surface cursor-pointer">
+<input checked="" class="accent-primary" name="vinculo" type="radio"/> Aluno(a) UNICAP (RA)
+          </label>
+<label class="flex items-center gap-2 p-space-xs rounded-xl bg-surface-container-low text-label-sm font-label-sm text-on-surface cursor-pointer">
+<input class="accent-primary" name="vinculo" type="radio"/> Comunidade Externa (CPF)
+          </label>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-medium">Identificador (Matrícula / CPF)</label>
+<input class="h-10 px-space-sm rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface outline-none focus:ring-2 focus:ring-primary" placeholder="Digite seu número de documento..." type="text"/>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-10 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="fecharModalDetalhes()" type="button">
+          Cancelar
+        </button>
+<button class="flex-1 h-10 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" onclick="confirmarInscricao()" type="button">
+          Avançar Inscrição
+        </button>
+</div>
+</div>
+</div>
+<script>
+    let abaAtual = 'todos';
+
+    function selecionarAba(elemento, categoria) {
+      abaAtual = categoria;
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant', 'font-medium');
+      });
+      elemento.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+      elemento.classList.remove('text-on-surface-variant', 'font-medium');
+      filtrarProjetos();
+    }
+
+    function filtrarProjetos() {
+      const termo = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+      const areaFiltro = document.getElementById('filterArea').value;
+      const localFiltro = document.getElementById('filterLocal').value;
+      const accFiltro = document.getElementById('filtroAcc').checked;
+      
+      const cards = document.querySelectorAll('.projeto-card');
+      let visiveis = 0;
+
+      cards.forEach(card => {
+        const textoCard = card.innerText.toLowerCase();
+        const categoriaCard = card.getAttribute('data-categoria') || '';
+        const areaCard = card.getAttribute('data-area') || '';
+        const localCard = card.getAttribute('data-local') || '';
+        const accCard = card.getAttribute('data-acc') === 'true';
+
+        let atendeAba = (abaAtual === 'todos') || categoriaCard.includes(abaAtual);
+        let atendeBusca = (termo === '') || textoCard.includes(termo);
+        let atendeArea = (areaFiltro === '') || (areaCard === areaFiltro);
+        let atendeLocal = (localFiltro === '') || (localCard === localFiltro);
+        let atendeAcc = !accFiltro || accCard;
+
+        if (atendeAba && atendeBusca && atendeArea && atendeLocal && atendeAcc) {
+          card.classList.remove('hidden');
+          visiveis++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      const contador = document.getElementById('contadorResultados');
+      if (contador) {
+        contador.innerText = `Exibindo ${visiveis} projeto(s) com editais ativos`;
+      }
+    }
+
+    function aplicarBuscaHero() {
+      const grid = document.getElementById('gridCards');
+      if (grid) {
+        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      filtrarProjetos();
+    }
+
+    function limparFiltros() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('filterArea').value = '';
+      document.getElementById('filterLocal').value = '';
+      document.getElementById('filtroAcc').checked = false;
+      document.querySelectorAll('input[name="turno"]').forEach(cb => cb.checked = false);
+      filtrarProjetos();
+    }
+
+    function abrirModalDetalhes(titulo, cursos, acc, modalidade, local) {
+      document.getElementById('modalTitulo').innerText = titulo;
+      document.getElementById('modalCursos').innerText = cursos;
+      document.getElementById('modalAcc').innerText = acc;
+      document.getElementById('modalModalidade').innerText = modalidade;
+      document.getElementById('modalLocal').innerText = local;
+      document.getElementById('modalInscricao').classList.remove('hidden');
+    }
+
+    function fecharModalDetalhes() {
+      document.getElementById('modalInscricao').classList.add('hidden');
+    }
+
+    function confirmarInscricao() {
+      alert('Redirecionando para autenticação do Portal UNICAP para validação do plano de atividades.');
+      fecharModalDetalhes();
+    }
+
+    function enviarParceria(event) {
+      event.preventDefault();
+      document.getElementById('parceriaForm').reset();
+      const msg = document.getElementById('msgSucessoParceria');
+      msg.classList.remove('hidden');
+      setTimeout(() => msg.classList.add('hidden'), 6000);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)] mt-auto"><div class="w-full px-space-xl py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-md"><span class="font-label-md text-label-md text-on-surface font-semibold">UNICAP • Universidade Católica de Pernambuco</span><span class="hidden md:inline font-body-sm text-body-sm text-outline">|</span><span class="font-body-sm text-body-sm">Pró-Reitoria de Pesquisa, Pós-Graduação e Extensão (PROPESP)</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><span>Rua do Príncipe, 526, Boa Vista, Recife - PE</span><a class="text-primary hover:text-primary-container transition-colors" href="#">Normativas Acadêmicas</a><a class="text-primary hover:text-primary-container transition-colors" href="#">Portal Institucional</a></div></div></footer></div></body></html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UNICAP - Portal de Extensão Universitária</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#ecf1ff","inverse-primary":"#ffb3b5","primary-fixed-dim":"#ffb3b5","surface-container":"#e7eeff","inverse-surface":"#263143","on-secondary-fixed-variant":"#384668","on-primary-container":"#ff888f","on-surface":"#111c2d","on-tertiary-fixed-variant":"#663e00","on-error-container":"#93000a","secondary-fixed":"#d9e2ff","on-tertiary-fixed":"#2b1700","outline-variant":"#ddc0c0","primary":"#5b0114","on-error":"#ffffff","surface-container-low":"#f0f3ff","on-primary-fixed-variant":"#84222e","error":"#ba1a1a","tertiary-container":"#5d3700","on-background":"#111c2d","on-secondary-container":"#4d5b7e","secondary-fixed-dim":"#b7c6ee","surface-tint":"#a33a44","primary-fixed":"#ffdada","secondary":"#4f5e81","on-primary":"#ffffff","surface-variant":"#d8e3fb","surface":"#f9f9ff","on-primary-fixed":"#40000b","surface-container-highest":"#d8e3fb","on-surface-variant":"#564242","on-secondary":"#ffffff","surface-container-high":"#dee8ff","tertiary":"#3e2400","surface-dim":"#cfdaf2","on-tertiary":"#ffffff","tertiary-fixed":"#ffddba","surface-container-lowest":"#ffffff","secondary-container":"#c5d4fd","tertiary-fixed-dim":"#ffb964","on-secondary-fixed":"#0a1a3a","on-tertiary-container":"#e79b38","primary-container":"#7a1b28","background":"#f9f9ff","surface-bright":"#f9f9ff","error-container":"#ffdad6","outline":"#897171"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-3xl":"4.5rem","space-lg":"1.5rem","space-xs":"0.5rem","space-2xl":"3rem","space-xl":"2rem","space-2xs":"0.25rem","container-max":"80rem","gutter-desktop":"1.5rem","gutter-mobile":"1rem","space-sm":"0.75rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["\"Source Serif 4\""],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display":["\"Source Serif 4\""],"headline-lg":["\"Source Serif 4\""],"headline-xl":["\"Source Serif 4\""],"label-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="UNICAP Extensão Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Plx-22JWT5Qus4ARoOkf1489xstW8uIZct4ASJ8TW_mGAOd36WU4pepryZe5N6Ee_PsFBL5BNYTXx8NiZyims8RFM9MytFrzGeyysmY3C4sUNSuVlW7kT_fKjwvksc7E0QEwcVJ6_jKw5xlZLYt4F4aR1JcqeP39bp-DvjXROeC4BvT6FmC5yYorWBh2_Sisu8TFpD8fFL1DvbOKf5V7BFIAtKF8XVWNAYnOv5w_YmbHly0TXWLj"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">UNICAP</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Extensão Comunitária</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-2xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Edital Vigente</span><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-variant font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>Aberto</span></div><span class="font-body-sm text-body-sm text-on-surface font-medium">PIBEX &amp; PROEXT 2024.2</span><span class="font-label-sm text-label-sm text-on-surface-variant">Prazo final: 24 de Novembro</span></div></div><nav class="flex flex-col gap-space-2xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-all group bg-primary-container text-on-primary font-semibold shadow-sm" data-path="painel-gestor" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">dashboard</span><span class="font-label-lg text-label-lg">Painel Gestor</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="vitrine-publica" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">public</span><span class="font-label-lg text-label-lg">Vitrine Pública</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="submeter-projeto" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">post_add</span><span class="font-label-lg text-label-lg">Submeter Projeto</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="acompanhamento" href="#"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-105">monitoring</span><span class="font-label-lg text-label-lg">Acompanhamento</span></a></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px]">help</span><span class="font-label-md text-label-md font-semibold">Central de Apoio</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Dúvidas sobre creditação curricular ou pareceres técnicos de extensão?</p><a class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold transition-colors flex items-center gap-1" href="mailto:extensao@unicap.br">Fale com a DEG <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant outline-none focus:ring-2 focus:ring-primary-container transition-all shadow-[0_1px_4px_rgba(0,0,0,0.03)]" placeholder="Buscar projetos, docentes coordenadores, ODS ou editais..." type="search"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificações" class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxAcA7OCPOEMSXa1oYPlRA4peyUXkVN6AK_OPRp4ENheCC3znn2mNf-K9HXKFIAC9B5FfG6ipie40rxQAlgpYJt_wcTxhikTsxL7GZDe1FZCvp9YM5bVLKSAsxmYb_uqntV9wxegFYtUWDQEtzV_CCyBwnpW3YNtRLgg-IDCuqLCtBv3uEmKRn_7FHvaRU1uNWOHMxzTytZE-jL2GekiXMV-HDqprJsv8Vi0jnQ2H8mL1sAU8KVzlW"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Profa. Dra. Ana Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Coordenação Geral de Extensão</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-xl py-space-lg"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Welcome & Context Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm p-space-lg">
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-gradient-to-br from-primary/10 via-secondary-container/20 to-transparent blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Semestre Vigente: 2025.1
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">• Ciclo Avaliativo Trienal PROPESP</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+          Painel de Gestão da Extensão Comunitária
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Supervisão institucional de curricularização, impacto metropolitano no Grande Recife, bolsas acadêmicas e alinhamento à Agenda 2030 da ONU.
+        </p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center flex-wrap gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-4 py-2.5 rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-variant transition-all font-label-lg text-label-lg shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">download</span>
+          Exportar Relatório MEC
+        </button>
+<button class="inline-flex items-center gap-space-xs px-4 py-2.5 rounded-xl bg-primary-container text-on-primary hover:bg-primary transition-all font-label-lg text-label-lg shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+          Novo Edital PIBEX
+        </button>
+</div>
+</div>
+</div>
+<!-- Key Metrics & Institutional KPIs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1: Total Cadastrados -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Total Projetos</span>
+<span class="material-symbols-outlined text-[20px] text-primary">menu_book</span>
+</div>
+<div class="pl-space-xs mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">142</span>
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+18%
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">vs. exercício anterior (2024.1)</p>
+</div>
+</div>
+<!-- Card 2: Projetos Ativos -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Projetos Ativos</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">verified</span>
+</div>
+<div class="pl-space-xs mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">98</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-secondary-fixed-variant font-label-sm text-label-sm">
+            69% regularidade
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Em execução contínua</p>
+</div>
+</div>
+<!-- Card 3: Bolsistas & Voluntários -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Estudantes Engajados</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">groups</span>
+</div>
+<div class="pl-space-xs mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">284</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">graduandos</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">120 Bolsas</span>
+<span class="text-on-surface-variant text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">164 Voluntários</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Impacto Externo -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Público Impactado</span>
+<span class="material-symbols-outlined text-[20px] text-primary-container">domain</span>
+</div>
+<div class="pl-space-xs mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">34.850</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Comunidades de Recife e RMR</p>
+</div>
+</div>
+<!-- Card 5: Pendências do Comitê -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Relatórios Pendentes</span>
+<span class="material-symbols-outlined text-[20px] text-error">pending_actions</span>
+</div>
+<div class="pl-space-xs mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-error font-bold">12</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Requer atenção</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Aguardando parecer do comitê</p>
+</div>
+</div>
+</div>
+<!-- Dynamic Multi-Facet Filter Bar -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Filtros Avançados de Gestão</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container transition-colors flex items-center gap-1 font-semibold" id="reset-filters-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+        Redefinir Filtros
+      </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Centro Acadêmico -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold" for="filter-centro">Centro Acadêmico</label>
+<select class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary-container transition-all" id="filter-centro">
+<option value="all">Todos os Centros (UNICAP)</option>
+<option value="icam">UNICAP Icam Tech</option>
+<option value="humanas">Ciências Humanas</option>
+<option value="saude">Saúde e Ciências Biológicas</option>
+<option value="juridicas">Ciências Jurídicas</option>
+</select>
+</div>
+<!-- Linha Temática -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold" for="filter-tematica">Linha Temática Nacional</label>
+<select class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary-container transition-all" id="filter-tematica">
+<option value="all">Todas as Linhas Temáticas</option>
+<option value="educacao">Educação</option>
+<option value="direitos">Direitos Humanos &amp; Cidadania</option>
+<option value="saude_col">Saúde Coletiva</option>
+<option value="tecnologia">Tecnologia e Inovação Social</option>
+<option value="cultura">Cultura, Memória e Arte</option>
+</select>
+</div>
+<!-- Status Operacional -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold" for="filter-status">Status de Execução</label>
+<select class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary-container transition-all" id="filter-status">
+<option value="all">Todos os Status</option>
+<option value="ativo">Ativo em Andamento</option>
+<option value="analise">Em Análise / Comitê</option>
+<option value="pendente">Pendente de Relatório</option>
+<option value="concluido">Concluído Regular</option>
+</select>
+</div>
+<!-- Edital Vinculado -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold" for="filter-edital">Edital Institucional</label>
+<select class="h-10 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary-container transition-all" id="filter-edital">
+<option value="all">Todos os Editais</option>
+<option value="pibex-2025">PIBEX 2025.1 (Vigente)</option>
+<option value="proext-2024">PROEXT Inovação 2024</option>
+<option value="fluxo-continuo">Curricularização Fluxo Contínuo</option>
+<option value="jesuitas">Rede Jesuíta de Cidadania</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Analytical Visualizations Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Chart 1: ODS Distribution (8 cols) -->
+<div class="lg:col-span-7 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Alinhamento aos ODS • Agenda 2030</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Distribuição quantitativa de projetos por Metas Globais da ONU</p>
+</div>
+<span class="inline-flex items-center gap-1 text-label-sm font-semibold px-2 py-1 bg-surface-container text-on-secondary-fixed rounded-lg self-start sm:self-auto">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">public</span>
+          17 Objetivos Rastreados
+        </span>
+</div>
+<!-- Inline Bar Visualizer for Top ODS -->
+<div class="flex flex-col gap-space-sm my-space-xs">
+<!-- ODS 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded flex items-center justify-center bg-primary text-on-primary text-[10px] font-bold">4</span>
+              ODS 4: Educação de Qualidade
+            </span>
+<span class="text-on-surface-variant font-bold">48 Projetos (34%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 34%"></div>
+</div>
+</div>
+<!-- ODS 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded flex items-center justify-center bg-secondary text-on-secondary text-[10px] font-bold">3</span>
+              ODS 3: Saúde e Bem-Estar
+            </span>
+<span class="text-on-surface-variant font-bold">38 Projetos (27%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 27%"></div>
+</div>
+</div>
+<!-- ODS 10 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded flex items-center justify-center bg-primary-container text-on-primary text-[10px] font-bold">10</span>
+              ODS 10: Redução das Desigualdades
+            </span>
+<span class="text-on-surface-variant font-bold">26 Projetos (18%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 18%"></div>
+</div>
+</div>
+<!-- ODS 8 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded flex items-center justify-center bg-tertiary-container text-on-primary text-[10px] font-bold">8</span>
+              ODS 8: Trabalho Decente e Crescimento
+            </span>
+<span class="text-on-surface-variant font-bold">18 Projetos (13%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full transition-all duration-500" style="width: 13%"></div>
+</div>
+</div>
+<!-- ODS 16 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded flex items-center justify-center bg-on-secondary-fixed-variant text-on-primary text-[10px] font-bold">16</span>
+              ODS 16: Paz, Justiça e Instituições Eficazes
+            </span>
+<span class="text-on-surface-variant font-bold">12 Projetos (8%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-on-secondary-fixed-variant rounded-full transition-all duration-500" style="width: 8%"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>*Cada projeto pode abranger até 3 metas secundárias da ONU.</span>
+<button class="text-primary font-semibold hover:underline flex items-center gap-1 font-label-sm text-label-sm" type="button">
+          Mapa de Calor ODS <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Chart 2: Budget & Scholarship per School (5 cols) -->
+<div class="lg:col-span-5 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="pb-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Distribuição de Bolsas &amp; Centros</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Captação orçamentária PIBEX e incentivos por Escola</p>
+</div>
+<!-- Donut / Concentric Breakdown Representation -->
+<div class="flex items-center justify-around my-space-sm">
+<!-- SVG Donut Chart Minimal -->
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background circle -->
+<circle class="text-surface-container" cx="18" cy="18" fill="none" r="15.915" stroke="currentColor" stroke-width="3.8"></circle>
+<!-- Segment 1: Saúde (35%) -->
+<circle class="text-primary" cx="18" cy="18" fill="none" r="15.915" stroke="currentColor" stroke-dasharray="35 65" stroke-dashoffset="0" stroke-width="4.2"></circle>
+<!-- Segment 2: Humanas (30%) -->
+<circle class="text-secondary" cx="18" cy="18" fill="none" r="15.915" stroke="currentColor" stroke-dasharray="30 70" stroke-dashoffset="-35" stroke-width="4.2"></circle>
+<!-- Segment 3: Jurídicas (20%) -->
+<circle class="text-primary-container" cx="18" cy="18" fill="none" r="15.915" stroke="currentColor" stroke-dasharray="20 80" stroke-dashoffset="-65" stroke-width="4.2"></circle>
+<!-- Segment 4: ICAM Tech (15%) -->
+<circle class="text-tertiary-container" cx="18" cy="18" fill="none" r="15.915" stroke="currentColor" stroke-dasharray="15 85" stroke-dashoffset="-85" stroke-width="4.2"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">120</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bolsistas</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Saúde &amp; Biol. (42 bolsas)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Ciências Humanas (36 bolsas)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Ciências Jurídicas (24 bolsas)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">UNICAP Icam Tech (18 bolsas)</span>
+</div>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">Execução Orçamentária PROPESP:</span>
+<span class="text-on-surface font-bold">R$ 584.000,00 de R$ 720.000,00 (81%)</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid: Management Table & Committee Deadlines -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Projects Management Table (8 cols xl) -->
+<div class="xl:col-span-8 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Projetos em Acompanhamento Recente</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitoramento de vigência, impacto e pareceres técnicos</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Exibindo 4 de 142</span>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant" title="Filtrar tabela" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Overflow container for table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface">
+<th class="py-3 px-3 rounded-l-lg font-label-md text-label-md font-bold uppercase tracking-wider">Projeto &amp; Coordenação</th>
+<th class="py-3 px-3 font-label-md text-label-md font-bold uppercase tracking-wider">Centro</th>
+<th class="py-3 px-3 font-label-md text-label-md font-bold uppercase tracking-wider">Impacto / Vagas</th>
+<th class="py-3 px-3 font-label-md text-label-md font-bold uppercase tracking-wider">Status</th>
+<th class="py-3 px-3 rounded-r-lg font-label-md text-label-md font-bold uppercase tracking-wider text-right">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                    Clínica Psicológica Itinerante no Morro da Conceição
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Coord.: Profa. Dra. Mariana Alencar • Psicologia
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-secondary-fixed">
+                  Saúde e Biol.
+                </span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">1.850 pessoas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 Bolsistas | 6 Volunt.</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Ativo
+                </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-semibold text-primary transition-all shadow-sm" type="button">
+                  Avaliar
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                    Inclusão Digital para Idosos na Comunidade do Coque
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Coord.: Prof. Dr. Robson Bezerra • Ciência da Computação
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-secondary-fixed">
+                  UNICAP Icam Tech
+                </span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">420 idosos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Bolsistas | 4 Volunt.</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                  Pendente Relatório
+                </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-tertiary-fixed hover:bg-tertiary-container hover:text-on-primary font-label-sm text-label-sm font-semibold text-on-tertiary-fixed transition-all shadow-sm" type="button">
+                  Cobrar
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                    Observatório de Mediação de Conflitos e Acesso à Justiça
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Coord.: Profa. Ma. Clarissa Ramos • Direito
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-secondary-fixed">
+                  Ciências Jurídicas
+                </span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">3.200 assistidos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6 Bolsistas | 12 Volunt.</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Em Análise
+                </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-semibold text-primary transition-all shadow-sm" type="button">
+                  Parecer
+                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                    Alfabetização Cidadã e Letramento Crítico de Jovens e Adultos
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Coord.: Prof. Dr. Cláudio Neves • Pedagogia
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-secondary-fixed">
+                  Ciências Humanas
+                </span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">950 alunos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 Bolsistas | 8 Volunt.</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Ativo
+                </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-semibold text-primary transition-all shadow-sm" type="button">
+                  Detalhes
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between pt-space-xs text-on-surface-variant font-body-sm text-body-sm gap-2">
+<span>Mostrando página 1 de 36 do repositório de extensão</span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-semibold font-label-sm text-label-sm hover:bg-surface-variant transition-colors" type="button">Anterior</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-semibold font-label-sm text-label-sm" type="button">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-semibold font-label-sm text-label-sm hover:bg-surface-variant transition-colors" type="button">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-semibold font-label-sm text-label-sm hover:bg-surface-variant transition-colors" type="button">3</button>
+<span class="px-1 font-bold">...</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-semibold font-label-sm text-label-sm hover:bg-surface-variant transition-colors" type="button">Próxima</button>
+</div>
+</div>
+</div>
+<!-- Committee Deadlines & Notices (4 cols xl) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Alerts Box -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[22px]">event_upcoming</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Prazos &amp; Calendário</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Comitê DEG</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Deadline 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-xs">
+<div class="p-2 rounded-lg bg-surface-container-highest text-primary flex flex-col items-center justify-center min-w-[44px]">
+<span class="font-headline-sm text-headline-sm font-bold leading-none">28</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Mar</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Entrega de Relatórios Parciais</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edital PIBEX 2024.2 • 12 projetos restantes</span>
+<span class="font-label-sm text-label-sm text-error font-bold mt-1">Faltam 4 dias</span>
+</div>
+</div>
+<!-- Deadline 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-xs">
+<div class="p-2 rounded-lg bg-surface-container-highest text-secondary flex flex-col items-center justify-center min-w-[44px]">
+<span class="font-headline-sm text-headline-sm font-bold leading-none">05</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Abr</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Reunião Ordinária da DEG/UNICAP</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Homologação dos novos planos de trabalho</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Sala de Reuniões PROPESP &amp; Teams</span>
+</div>
+</div>
+<!-- Deadline 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-xs">
+<div class="p-2 rounded-lg bg-surface-container-highest text-tertiary flex flex-col items-center justify-center min-w-[44px]">
+<span class="font-headline-sm text-headline-sm font-bold leading-none">18</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Abr</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Publicação de Vagas Remanescentes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chamada complementar para bolsistas Prouni</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-1">Portal da Extensão</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Campus Highlight & Field Work Photographic Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wider">Ação em Destaque no Território</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Comunidade Santo Amaro</span>
+</div>
+<div class="relative rounded-lg overflow-hidden h-40 group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Estudantes universitários de jaleco e prancheta em ação comunitária no Recife Antigo, dialogando com famílias ribeirinhas, luz solar natural suave da manhã, estética acolhedora com tons vinho borgonha e azul marinho institucionais da Universidade Católica de Pernambuco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxn-jYNooegH7Vz0YeHwHwOdxoQi0dxh9ad4vjAGTkWv5jGfgQuTS_x96Rys6ntAIvniZ2XLmEOIfjdJlKCFRhp3K91ilzvwYK8anTQ4hpe-bJ7fuCv_5NaGHYlkfxt2p8alPNEPUnihf-BLqsS1AyuNucB8qssi8-QyEQPFX_tDuHLZp0WXO1j5hr7UQc6dWWCuG4li61ONp0Ze1HxMC1F9fBC6p06w5OrJbF9uVJEor3kmBlyr10"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-space-sm text-surface-bright">
+<span class="font-label-sm text-label-sm font-bold uppercase text-secondary-container">Projeto Roda Viva</span>
+<p class="font-body-sm text-body-sm font-medium leading-snug line-clamp-2">
+              Atendimento integrado de fonoaudiologia, direito e assistência jurídica preventiva.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-1">
+<span class="text-on-surface-variant">Auditado pelo Comitê de Ética</span>
+<button class="text-primary font-bold hover:underline" type="button">Ver registro fotográfico</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive filter reset behavior for manager dashboard
+  document.getElementById('reset-filters-btn')?.addEventListener('click', () => {
+    const selects = ['filter-centro', 'filter-tematica', 'filter-status', 'filter-edital'];
+    selects.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = 'all';
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)] mt-auto"><div class="w-full px-space-xl py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><div class="flex items-center gap-space-md"><span class="font-label-md text-label-md text-on-surface font-semibold">UNICAP • Universidade Católica de Pernambuco</span><span class="hidden md:inline font-body-sm text-body-sm text-outline">|</span><span class="font-body-sm text-body-sm">Pró-Reitoria de Pesquisa, Pós-Graduação e Extensão (PROPESP)</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><span>Rua do Príncipe, 526, Boa Vista, Recife - PE</span><a class="text-primary hover:text-primary-container transition-colors" href="#">Normativas Acadêmicas</a><a class="text-primary hover:text-primary-container transition-colors" href="#">Portal Institucional</a></div></div></footer></div></body></html>
