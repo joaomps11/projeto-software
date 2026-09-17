@@ -1,0 +1,29 @@
+# Dependências
+node_modules/
+
+# Build de produção
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+bun-debug.log*
+
+# Variáveis de ambiente (nunca commitar segredos)
+.env
+.env.local
+.env.*.local
+
+# Editor / sistema
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Cache de ferramentas
+.eslintcache
+*.tsbuildinfo
+.vite/

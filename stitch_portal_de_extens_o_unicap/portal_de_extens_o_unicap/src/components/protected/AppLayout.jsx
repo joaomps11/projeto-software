@@ -1,0 +1,112 @@
+import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
+import { useSession } from "../../contexts/SessionContext";
+import Button from "../ui/Button";
+import Badge from "../ui/Badge";
+import { Logout, Settings } from "../ui/Icons";
+
+function HelpIcon({ className = "h-4 w-4" }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+    </svg>
+  );
+}
+
+HelpIcon.propTypes = {
+  className: PropTypes.string
+};
+
+const managerNav = [
+  { to: "/dashboard", label: "Painel Gestor", icon: "dashboard" },
+  { to: "/tracking", label: "Acompanhamento", icon: "monitoring" },
+  { to: "/submit", label: "Submeter Projeto", icon: "post_add" }
+];
+
+const communityNav = [
+  { to: "/public", label: "Vitrine Pública", icon: "public" },
+  { to: "/submit", label: "Submeter Projeto", icon: "post_add" }
+];
+
+export default function AppLayout({ children }) {
+  const { profile, logout } = useSession();
+  const links = profile === "gestor" ? managerNav : communityNav;
+
+  return (
+    <div className="flex min-h-screen flex-col bg-background text-on-surface antialiased">
+      <header className="sticky top-0 z-40 border-b border-surface-container-high bg-surface-container-lowest/90 backdrop-blur-xl px-6 py-3 shadow-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="font-display text-xl font-bold text-primary tracking-tight">UNICAP</span>
+            <Badge status={profile === "gestor" ? "active" : "completed"} />
+            <span className="hidden sm:inline text-label-sm text-on-surface-variant">
+              {profile === "gestor" ? "Área de Gestão" : "Área Pública"}
+            </span>
+          </div>
+
+          <nav className="hidden items-center gap-1 sm:flex">
+            {links.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === "/dashboard"}
+                className={({ isActive }) =>
+                  `inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors ${
+                    isActive
+                      ? "bg-primary-container text-on-primary shadow-sm"
+                      : "text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface"
+                  }`
+                }
+              >
+                <span className="material-symbols-outlined text-sm">
+                  {link.icon === "dashboard" ? "dashboard" : link.icon === "monitoring" ? "monitoring" : link.icon === "post_add" ? "post_add" : "public"}
+                </span>
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 rounded-lg border border-surface-container-high bg-surface-container px-3 py-2 text-label-sm text-on-surface-variant shadow-sm transition-colors hover:bg-surface-container-high hover:text-on-surface"
+            >
+              <HelpIcon className="h-4 w-4" />
+              <span className="hidden sm:inline">Ajuda</span>
+            </button>
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 rounded-lg border border-surface-container-high bg-surface-container px-3 py-2 text-label-sm text-on-surface-variant shadow-sm transition-colors hover:bg-surface-container-high hover:text-on-surface"
+            >
+              <Settings className="h-4 w-4" />
+              <span className="hidden sm:inline">Configurações</span>
+            </button>
+            <Button variant="ghost" onClick={logout} className="gap-1">
+              <Logout className="h-4 w-4" />
+              <span className="hidden sm:inline">Sair</span>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <div className="flex flex-1 flex-col">
+        <main className="flex-1 px-6 py-8">
+          <div className="mx-auto max-w-7xl">
+            {children}
+          </div>
+        </main>
+      </div>
+
+      <footer className="border-t border-surface-container-highest bg-surface-container-lowest py-4">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 text-on-surface-variant text-label-sm">
+          <span>UNICAP • Universidade Católica de Pernambuco • Propesp / Deg</span>
+          <span className="sm:inline">Rua do Príncipe, 526, Boa Vista, Recife - PE</span>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+AppLayout.propTypes = {
+  children: PropTypes.node
+};
