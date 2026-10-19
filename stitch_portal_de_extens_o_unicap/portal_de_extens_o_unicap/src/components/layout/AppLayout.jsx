@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useSession } from "../../contexts/SessionContext";
 import Button from "../ui/Button";
-import Badge from "../ui/Badge";
 import Modal from "../ui/Modal";
 import { Logout, Settings } from "../ui/Icons";
 
@@ -33,8 +32,15 @@ const communityNav = [
 
 export default function AppLayout({ children }) {
   const { profile, logout } = useSession();
+  const navigate = useNavigate();
   const [helpOpen, setHelpOpen] = useState(false);
   const links = profile === "gestor" ? managerNav : communityNav;
+
+  // Sair sempre encerra a sessão e devolve o usuário à tela de login.
+  const handleLogout = () => {
+    logout();
+    navigate("/", { replace: true });
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-on-surface antialiased">
@@ -42,10 +48,6 @@ export default function AppLayout({ children }) {
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="font-display text-xl font-bold text-primary tracking-tight">UNICAP</span>
-            <Badge
-              status={profile === "gestor" ? "active" : "completed"}
-              label={profile === "gestor" ? "Perfil Gestor" : "Perfil Estudante"}
-            />
             <span className="hidden sm:inline text-label-sm text-on-surface-variant">
               {profile === "gestor" ? "Área de Gestão" : "Área Pública"}
             </span>
@@ -89,7 +91,7 @@ export default function AppLayout({ children }) {
               <Settings className="h-4 w-4" />
               <span className="hidden sm:inline">Configurações</span>
             </Link>
-            <Button variant="ghost" onClick={logout} className="gap-1">
+            <Button variant="ghost" onClick={handleLogout} className="gap-1">
               <Logout className="h-4 w-4" />
               <span className="hidden sm:inline">Sair</span>
             </Button>

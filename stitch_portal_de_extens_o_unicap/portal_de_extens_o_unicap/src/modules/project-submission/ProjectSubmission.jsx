@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "../../components/ui/Button";
 import Card from "../../components/ui/Card";
-import Badge from "../../components/ui/Badge";
 import { ArrowBack, ArrowForward, Save, CheckCircle } from "../../components/ui/Icons";
 import Stepper from "./components/Stepper";
 import StepIdentificacao from "./components/StepIdentificacao";
@@ -109,7 +108,6 @@ export default function ProjectSubmission() {
   return (
     <div className="flex flex-col gap-8">
       <div className="mb-2 flex items-center gap-2">
-        <Badge status="active" />
         <span className="text-label-sm text-on-surface-variant">Módulo Docente • DEG / PROPESP</span>
       </div>
 

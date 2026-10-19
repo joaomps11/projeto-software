@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Badge from "../../../components/ui/Badge";
 import { deliverables } from "../data/submissionOptions";
 
 function Field({ id, label, value, onChange, error, hint, placeholder }) {
@@ -48,7 +47,6 @@ export default function StepTrabalho({ form, updateForm, errors }) {
             Objetivos, atividades previstas, cronograma resumido e produtos/entregáveis institucionais.
           </p>
         </div>
-        <Badge status="analysis" label="Plano" />
       </div>
 
       <Field

@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Badge from "../../../components/ui/Badge";
 import Input from "../../../components/ui/Input";
 import { centers, editais, modalities } from "../data/submissionOptions";
 
@@ -14,7 +13,6 @@ export default function StepIdentificacao({ form, updateForm, errors }) {
             Definição do escopo, vinculação a edital institucional e centro acadêmico.
           </p>
         </div>
-        <Badge type="course" label="Obrigatório" />
       </div>
 
       <Input

@@ -142,25 +142,6 @@ describe("Sprint 8 — ações do cabeçalho e exportação", () => {
     delete URL.revokeObjectURL;
   });
 
-  it("'Submeter Relatório Parcial' leva para a aba de relatórios", async () => {
-    const user = userEvent.setup();
-    renderTracking();
-
-    await user.click(screen.getByRole("button", { name: /submeter relatório parcial/i }));
-
-    expect(screen.getByRole("heading", { name: /relatórios & pareceres/i })).toBeInTheDocument();
-  });
-
-  it("'Gerenciar Bolsistas' leva para a folha de frequência", async () => {
-    const user = userEvent.setup();
-    renderTracking();
-
-    await user.click(screen.getByRole("button", { name: /visão geral & indicadores/i }));
-    await user.click(screen.getByRole("button", { name: /gerenciar bolsistas/i }));
-
-    expect(screen.getByRole("heading", { name: /equipe discente e homologação/i })).toBeInTheDocument();
-  });
-
   it("'Emitir Declaração do Projeto' confirma a emissão", async () => {
     const user = userEvent.setup();
     renderTracking();

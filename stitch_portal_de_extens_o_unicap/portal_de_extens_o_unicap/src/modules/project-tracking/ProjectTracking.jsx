@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import Badge from "../../components/ui/Badge";
 import Button from "../../components/ui/Button";
 import Card from "../../components/ui/Card";
 import { Calendar, Person, School } from "../../components/ui/Icons";
@@ -73,7 +72,6 @@ export default function ProjectTracking() {
             <span className="rounded-full bg-surface-container px-2.5 py-1 text-label-sm text-on-surface-variant">
               Código: {project.code}
             </span>
-            <Badge status={project.status} />
             <span className="rounded-full bg-secondary-container px-2.5 py-1 text-sm text-on-secondary-fixed">
               Edital {project.edital}
             </span>
@@ -108,26 +106,6 @@ export default function ProjectTracking() {
             }
           >
             Emitir Declaração do Projeto
-          </Button>
-          <Button
-            variant="secondary"
-            className="flex-1"
-            onClick={() => {
-              setActiveTab("relatorios");
-              showNotice("Selecione o relatório desejado e clique em Enviar.", 3000);
-            }}
-          >
-            Submeter Relatório Parcial
-          </Button>
-          <Button
-            variant="outline"
-            className="flex-1"
-            onClick={() => {
-              setActiveTab("frequencia");
-              showNotice("Gerenciamento de bolsistas: use a folha mensal abaixo.", 3000);
-            }}
-          >
-            Gerenciar Bolsistas
           </Button>
         </div>
       </div>

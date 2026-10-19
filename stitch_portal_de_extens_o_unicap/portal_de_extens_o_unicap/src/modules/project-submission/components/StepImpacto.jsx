@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Badge from "../../../components/ui/Badge";
 import { thematicLines, odsOptions } from "../data/submissionOptions";
 
 export default function StepImpacto({ form, updateForm, errors }) {
@@ -15,7 +14,6 @@ export default function StepImpacto({ form, updateForm, errors }) {
             Conexão com a Agenda 2030, linha temática institucional e impacto comunitário.
           </p>
         </div>
-        <Badge label="Agenda 2030" />
       </div>
 
       <div>

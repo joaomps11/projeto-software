@@ -59,13 +59,6 @@ export default function ManagerDashboard() {
       <section>
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <div className="mb-1 flex flex-wrap items-center gap-2 text-label-sm text-on-surface-variant">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-container px-2.5 py-1 font-semibold text-on-secondary-fixed">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
-                Semestre Vigente: {semesterInfo.code}
-              </span>
-              <span className="text-on-surface-variant">• {semesterInfo.cycle}</span>
-            </div>
             <h1 className="font-display text-3xl font-bold tracking-tight text-primary">
               Painel de Gestão da Extensão Comunitária
             </h1>

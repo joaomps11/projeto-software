@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Badge from "../../../components/ui/Badge";
 import { budgetCategories, annexRules } from "../data/submissionOptions";
 import { totalBudget } from "../validation";
 import { formatCurrency } from "../../../utils/format";
@@ -27,7 +26,6 @@ export default function StepOrcamento({ form, updateForm, errors, onAddAttachmen
             Distribuição dos recursos por categoria e documentação comprobatória da proposta.
           </p>
         </div>
-        <Badge status="pending" label="Recursos" />
       </div>
 
       <div>

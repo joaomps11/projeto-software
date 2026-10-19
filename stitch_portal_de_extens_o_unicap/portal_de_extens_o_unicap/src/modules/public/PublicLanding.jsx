@@ -10,8 +10,10 @@ import {
   Verified,
   Mail,
   CheckCircle,
-  Shield
+  Shield,
+  Logout
 } from "../../components/ui/Icons";
+import { useSession } from "../../contexts/SessionContext";
 import ProjectCard from "./components/ProjectCard";
 import ProjectFilters from "./components/ProjectFilters";
 import ProjectDetailModal from "./components/ProjectDetailModal";
@@ -53,6 +55,7 @@ FaqItem.propTypes = {
 
 export default function PublicLanding({ authenticated = false }) {
   const navigate = useNavigate();
+  const { logout } = useSession();
   const [selectedProject, setSelectedProject] = useState(null);
   const {
     search,
@@ -71,6 +74,11 @@ export default function PublicLanding({ authenticated = false }) {
     setSortBy,
     clearFilters
   } = useProjectFilters(projects);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/", { replace: true });
+  };
 
   const handleEnroll = (project) => {
     // Sprint 2: inscrição ainda é mock. Sprint 3 conecta ao fluxo de submissão.
@@ -112,6 +120,16 @@ export default function PublicLanding({ authenticated = false }) {
               {authenticated ? "Submeter Proposta" : "Área de Inscrição"}
               <ArrowForward className="h-4 w-4" />
             </Button>
+            {authenticated && (
+              <Button
+                variant="outline"
+                className="flex-none"
+                onClick={handleLogout}
+              >
+                <Logout className="h-4 w-4" />
+                <span className="hidden sm:inline">Sair</span>
+              </Button>
+            )}
           </div>
 
           <div className="mt-6 flex flex-wrap gap-4 text-sm font-medium text-surface-container-low">

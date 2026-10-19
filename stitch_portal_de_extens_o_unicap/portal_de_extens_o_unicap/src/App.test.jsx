@@ -77,8 +77,9 @@ describe("Sprint 8 — rotas protegidas, perfis e sessão", () => {
       await screen.findByRole("heading", { name: /conectando a unicap/i })
     ).toBeInTheDocument();
     // Cabeçalho do portal disponível para o estudante
-    expect(screen.getByRole("button", { name: /sair/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /configurações/i })).toBeInTheDocument();
+    const sairButtons = screen.getAllByRole("button", { name: /sair/i });
+    expect(sairButtons.length).toBeGreaterThan(0);
+    expect(screen.queryByRole("link", { name: /configurações/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /acompanhamento/i })).toBeInTheDocument();
     // Área exclusiva do gestor não aparece para o estudante
     expect(screen.queryByRole("link", { name: /painel gestor/i })).not.toBeInTheDocument();
@@ -88,6 +89,15 @@ describe("Sprint 8 — rotas protegidas, perfis e sessão", () => {
     const dialog = await screen.findByRole("dialog");
     expect(within(dialog).getByRole("heading", { name: /como podemos ajudar\?/i })).toBeInTheDocument();
     expect(within(dialog).getByText("extensao@unicap.br")).toBeInTheDocument();
+    await user.click(within(dialog).getByRole("button", { name: "Fechar" }));
+
+    // Sair encerra a sessão e volta para a tela de login (não para a vitrine pública)
+    await user.click(sairButtons[0]);
+
+    expect(
+      await screen.findByRole("heading", { name: /portal de extensão comunitária/i })
+    ).toBeInTheDocument();
+    expect(window.localStorage.getItem("unicap:session:v1")).toBeNull();
   });
 
   it("sessão persiste entre recargas quando 'manter conectada' está marcada", async () => {

@@ -1,14 +1,17 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
+import { SessionProvider } from "../../contexts/SessionContext";
 import PublicLanding from "./PublicLanding";
 import { projects } from "./data/projects";
 
 function renderLanding() {
   return render(
-    <MemoryRouter>
-      <PublicLanding />
-    </MemoryRouter>
+    <SessionProvider>
+      <MemoryRouter>
+        <PublicLanding authenticated />
+      </MemoryRouter>
+    </SessionProvider>
   );
 }
 

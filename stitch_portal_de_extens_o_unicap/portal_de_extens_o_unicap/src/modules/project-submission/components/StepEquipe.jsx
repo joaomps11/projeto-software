@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Badge from "../../../components/ui/Badge";
 import Input from "../../../components/ui/Input";
 import { teamRoles } from "../data/submissionOptions";
 
@@ -79,7 +78,6 @@ export default function StepEquipe({ form, updateForm, errors }) {
             Dimensionamento de estudantes envolvidos e estimativa de impacto direto na comunidade.
           </p>
         </div>
-        <Badge status="pending" label="Dimensionamento" />
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">

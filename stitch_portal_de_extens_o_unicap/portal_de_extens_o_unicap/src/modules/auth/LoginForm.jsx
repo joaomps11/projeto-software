@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useSession } from "../../contexts/SessionContext";
 import Button from "../../components/ui/Button";
 import Input from "../../components/ui/Input";
-import Badge from "../../components/ui/Badge";
 import { Shield, Lock, LockOpen, Mail, Eye, EyeOff } from "../../components/ui/Icons";
 
 const profiles = [
@@ -54,9 +53,6 @@ export default function LoginForm() {
   return (
     <div className="flex flex-col gap-6">
       <div className="text-center">
-        <div className="mb-2 flex items-center justify-center gap-2">
-          <Badge status="active" />
-        </div>
         <h1 className="font-display text-3xl font-bold tracking-tight text-on-surface">
           Portal de Extensão Comunitária
         </h1>
