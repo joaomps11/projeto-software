@@ -1,12 +1,15 @@
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/ui/Button";
 import { Download, Plus } from "../../components/ui/Icons";
+import { downloadTextFile } from "../../utils/download";
 import { dashboardProjects, filterOptions, semesterInfo } from "./data/dashboardData";
 import {
   filterProjects,
   sortProjects,
   paginate,
   buildDeadlines,
+  buildProjectsCsv,
   computeKpis
 } from "./dashboardLogic";
 import KpiCards from "./components/KpiCards";
@@ -26,6 +29,7 @@ const DEFAULT_FILTERS = {
 
 /** Painel de gestão institucional da extensão comunitária. */
 export default function ManagerDashboard() {
+  const navigate = useNavigate();
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   const [sortBy, setSortBy] = useState("title");
   const [page, setPage] = useState(1);
@@ -71,11 +75,20 @@ export default function ManagerDashboard() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button variant="outline">
+            <Button
+              variant="outline"
+              onClick={() =>
+                downloadTextFile(
+                  `relatorio-mec-extensao-${semesterInfo.code}.csv`,
+                  buildProjectsCsv(sorted),
+                  "text/csv;charset=utf-8"
+                )
+              }
+            >
               <Download className="h-4 w-4" />
               Exportar Relatório MEC
             </Button>
-            <Button>
+            <Button onClick={() => navigate("/submit")}>
               <Plus className="h-4 w-4" />
               Novo Edital PIBEX
             </Button>

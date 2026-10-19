@@ -9,7 +9,8 @@ import {
   paginate,
   daysUntil,
   deadlineStatus,
-  buildDeadlines
+  buildDeadlines,
+  buildProjectsCsv
 } from "./dashboardLogic";
 import { dashboardProjects, committeeDeadlines } from "./data/dashboardData";
 
@@ -208,5 +209,28 @@ describe("daysUntil / deadlineStatus", () => {
     sorted.forEach((d) => {
       expect(["overdue", "urgent", "upcoming"]).toContain(d.urgency);
     });
+  });
+});
+
+describe("buildProjectsCsv — exportação do Relatório MEC", () => {
+  it("gera CSV com BOM, cabeçalho e uma linha por projeto recebido", () => {
+    const csv = buildProjectsCsv(dashboardProjects.slice(0, 2));
+    const [header, ...rows] = csv.replace(/^\uFEFF/, "").trim().split("\r\n");
+
+    expect(header).toContain("Código");
+    expect(header).toContain("Execução (%)");
+    expect(rows).toHaveLength(2);
+    expect(rows[0]).toContain(dashboardProjects[0].id);
+    expect(rows[0]).toContain("Clínica Psicológica Itinerante no Morro da Conceição");
+    expect(rows[0]).toContain("Ativo");
+  });
+
+  it("respeita a lista filtrada que está sendo exibida no painel", () => {
+    const filtered = filterProjects(dashboardProjects, { center: "Ciências Jurídicas" });
+    const rows = buildProjectsCsv(filtered).replace(/^\uFEFF/, "").trim().split("\r\n");
+
+    expect(filtered.length).toBeGreaterThan(0);
+    expect(rows).toHaveLength(filtered.length + 1);
+    expect(rows[1]).toContain("Ciências Jurídicas");
   });
 });

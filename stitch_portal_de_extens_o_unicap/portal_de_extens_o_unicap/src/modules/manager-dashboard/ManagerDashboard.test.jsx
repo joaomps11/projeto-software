@@ -1,6 +1,7 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, afterEach, vi } from "vitest";
 import { render, screen, within, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 import ManagerDashboard from "./ManagerDashboard";
 import { dashboardProjects, committeeDeadlines } from "./data/dashboardData";
 import { PAGE_SIZE, buildDeadlines, computeKpis } from "./dashboardLogic";
@@ -9,7 +10,11 @@ const getKpiSection = () => screen.getByLabelText("Indicadores institucionais");
 
 describe("ManagerDashboard", () => {
   it("renderiza KPIs calculados a partir do registro de projetos", () => {
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
     const kpis = computeKpis(dashboardProjects);
     const kpiSection = getKpiSection();
 
@@ -33,7 +38,11 @@ describe("ManagerDashboard", () => {
 
   it("filtra por centro, status e limpa filtros", async () => {
     const user = userEvent.setup();
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
 
     await user.selectOptions(screen.getByLabelText("Filtrar por centro"), "Ciências Jurídicas");
     const expectedJuridicas = dashboardProjects.filter(
@@ -56,7 +65,11 @@ describe("ManagerDashboard", () => {
 
   it("busca por texto e atualiza a contagem", async () => {
     const user = userEvent.setup();
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
 
     await user.type(screen.getByLabelText("Buscar projetos"), "clínica psicológica");
     expect(screen.getByRole("status")).toHaveTextContent(/^1 projeto encontrado$/);
@@ -69,7 +82,11 @@ describe("ManagerDashboard", () => {
 
   it("ordena por impacto ao clicar na coluna", async () => {
     const user = userEvent.setup();
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
 
     await user.click(screen.getByRole("button", { name: "Ordenar por impacto" }));
     const table = screen.getByRole("table");
@@ -81,7 +98,11 @@ describe("ManagerDashboard", () => {
 
   it("pagina resultados com PAGE_SIZE itens por página", async () => {
     const user = userEvent.setup();
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
 
     const pageCount = Math.ceil(dashboardProjects.length / PAGE_SIZE);
     expect(pageCount).toBeGreaterThan(1);
@@ -96,7 +117,11 @@ describe("ManagerDashboard", () => {
 
   it("abre modal de detalhes do projeto e fecha", async () => {
     const user = userEvent.setup();
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
 
     const table = screen.getByRole("table");
     const targetRow = within(table)
@@ -115,7 +140,11 @@ describe("ManagerDashboard", () => {
   });
 
   it("mostra ações pendentes com prazos vencidos e relatórios", () => {
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
     const deadlines = buildDeadlines(committeeDeadlines);
     const overdue = deadlines.filter((d) => d.urgency === "overdue");
     const kpis = computeKpis(dashboardProjects);
@@ -135,7 +164,11 @@ describe("ManagerDashboard", () => {
 
   it("botão Revisar aplica filtro de projetos em análise", async () => {
     const user = userEvent.setup();
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
 
     await user.click(screen.getByRole("button", { name: /revisar/i }));
     const analysisCount = dashboardProjects.filter((p) => p.status === "analysis").length;
@@ -145,7 +178,11 @@ describe("ManagerDashboard", () => {
   });
 
   it("fireEvent.change em selects atualiza a listagem", () => {
-    render(<ManagerDashboard />);
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
     fireEvent.change(screen.getByLabelText("Filtrar por edital"), {
       target: { value: "PIBEX 2024.2" }
     });
@@ -153,5 +190,51 @@ describe("ManagerDashboard", () => {
     expect(screen.getByRole("status")).toHaveTextContent(
       expected === 1 ? "1 projeto encontrado" : `${expected} projetos encontrados`
     );
+  });
+});
+
+describe("Sprint 8 — ações do cabeçalho do painel", () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+    delete URL.createObjectURL;
+    delete URL.revokeObjectURL;
+  });
+
+  it("'Exportar Relatório MEC' dispara o download do CSV", async () => {
+    const createObjectURL = vi.fn(() => "blob:relatorio");
+    URL.createObjectURL = createObjectURL;
+    URL.revokeObjectURL = vi.fn();
+    vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+
+    const user = userEvent.setup();
+    render(
+      <MemoryRouter>
+        <ManagerDashboard />
+      </MemoryRouter>
+    );
+
+    await user.click(screen.getByRole("button", { name: /exportar relatório mec/i }));
+
+    expect(createObjectURL).toHaveBeenCalledTimes(1);
+    const blob = createObjectURL.mock.calls[0][0];
+    expect(blob.type).toContain("text/csv");
+  });
+
+  it("'Novo Edital PIBEX' navega para a tela de submissão", async () => {
+    const user = userEvent.setup();
+    render(
+      <MemoryRouter initialEntries={["/dashboard"]}>
+        <Routes>
+          <Route path="/dashboard" element={<ManagerDashboard />} />
+          <Route path="/submit" element={<h1>Submissão de Proposta de Extensão</h1>} />
+        </Routes>
+      </MemoryRouter>
+    );
+
+    await user.click(screen.getByRole("button", { name: /novo edital pibex/i }));
+
+    expect(
+      await screen.findByRole("heading", { name: /submissão de proposta de extensão/i })
+    ).toBeInTheDocument();
   });
 });

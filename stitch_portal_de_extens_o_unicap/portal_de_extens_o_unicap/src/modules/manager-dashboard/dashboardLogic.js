@@ -1,4 +1,5 @@
 import { dashboardProjects, committeeDeadlines } from "./data/dashboardData";
+import { toCsv } from "../../utils/download";
 
 // Regras puras do painel gestor — sem React, para testes de unidade diretos.
 
@@ -112,4 +113,56 @@ export function buildDeadlines(deadlines = committeeDeadlines, today = new Date(
   return deadlines
     .map((deadline) => deadlineStatus(deadline, today))
     .sort((a, b) => a.days - b.days);
+}
+
+const STATUS_LABELS = {
+  active: "Ativo",
+  pending: "Pendente",
+  analysis: "Em análise",
+  suspended: "Suspenso",
+  completed: "Concluído"
+};
+
+/**
+ * Conteúdo CSV do "Relatório MEC" — exporta a lista já filtrada/ordenada
+ * que está sendo exibida no painel.
+ */
+export function buildProjectsCsv(projects) {
+  const headers = [
+    "Código",
+    "Título",
+    "Coordenação",
+    "Centro",
+    "Linha temática",
+    "Edital",
+    "Status",
+    "Bolsistas",
+    "Voluntários",
+    "Impacto",
+    "Orçamento (R$)",
+    "Executado (R$)",
+    "Execução (%)",
+    "Relatórios pendentes",
+    "Semestre"
+  ];
+
+  const rows = projects.map((project) => [
+    project.id,
+    project.title,
+    project.coordinator,
+    project.center,
+    project.thematicLine,
+    project.grant,
+    STATUS_LABELS[project.status] || project.status,
+    project.scholarships,
+    project.volunteers,
+    project.impact,
+    project.budget,
+    project.spentBudget,
+    executionRate(project),
+    project.pendingReports,
+    project.semester
+  ]);
+
+  return toCsv(headers, rows);
 }

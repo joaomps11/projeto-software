@@ -3,6 +3,7 @@ import Card from "../../../components/ui/Card";
 import Badge from "../../../components/ui/Badge";
 import Button from "../../../components/ui/Button";
 import { formatDate } from "../../../utils/format";
+import { downloadTextFile } from "../../../utils/download";
 import { FileText, Upload, Download } from "../../../components/ui/Icons";
 
 const statusMap = {
@@ -49,7 +50,27 @@ export default function ReportsPanel({ reports, onSubmit }) {
 
               <div className="flex flex-none items-center gap-2">
                 {canDownload && (
-                  <Button variant="outline">
+                  <Button
+                    variant="outline"
+                    onClick={() =>
+                      downloadTextFile(
+                        `relatorio-${report.id}.txt`,
+                        [
+                          "PORTAL DE EXTENSÃO UNICAP — RELATÓRIO DO PROJETO",
+                          "=================================================",
+                          "",
+                          `Título: ${report.label}`,
+                          `Período: ${report.period}`,
+                          `Prazo: ${formatDate(report.dueDate)}`,
+                          `Situação: ${badge.label}`,
+                          "",
+                          report.detail,
+                          "",
+                          "Documento gerado automaticamente pelo portal (mock)."
+                        ].join("\n")
+                      )
+                    }
+                  >
                     <Download className="h-4 w-4" />
                     Baixar
                   </Button>

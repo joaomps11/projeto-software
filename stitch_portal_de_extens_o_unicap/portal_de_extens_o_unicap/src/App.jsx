@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { SessionProvider, useSession } from "./contexts/SessionContext";
 import ErrorBoundary from "./components/ui/ErrorBoundary";
-import AppLayout from "./components/protected/AppLayout";
-import LoginForm from "./components/login/LoginForm";
+import AppLayout from "./components/layout/AppLayout";
+import LoginForm from "./modules/auth/LoginForm";
 import PublicLanding from "./modules/public/PublicLanding";
 import ManagerDashboard from "./modules/manager-dashboard/ManagerDashboard";
 import ProjectSubmission from "./modules/project-submission/ProjectSubmission";
 import ProjectTracking from "./modules/project-tracking/ProjectTracking";
+import SettingsScreen from "./modules/settings/Settings";
 
 function ProtectedRoute({ children, allowedProfile }) {
   const { profile, isAuthenticated } = useSession();
@@ -44,6 +45,25 @@ function AuthPage() {
   );
 }
 
+/**
+ * A vitrine pública fica aberta a visitantes, mas quando o usuário já está
+ * autenticado ela ganha o cabeçalho do portal (navegação, configurações e sair),
+ * para que estudante/gestor nunca fiquem sem rota de volta.
+ */
+function PublicPage() {
+  const { isAuthenticated } = useSession();
+
+  if (!isAuthenticated) {
+    return <PublicLanding />;
+  }
+
+  return (
+    <AppLayout>
+      <PublicLanding authenticated />
+    </AppLayout>
+  );
+}
+
 function PageLoader() {
   const { loading } = useSession();
   if (loading) {
@@ -74,7 +94,7 @@ export default function App() {
       <ErrorBoundary>
         <Routes>
         <Route path="/" element={<PageLoader />} />
-        <Route path="/public" element={<PublicLanding />} />
+        <Route path="/public" element={<PublicPage />} />
 
         {/* Rotas protegidas por perfil */}
         <Route path="/dashboard" element={
@@ -86,15 +106,27 @@ export default function App() {
         } />
 
         <Route path="/submit" element={
-          <AppLayout>
-            <ProjectSubmission />
-          </AppLayout>
+          <ProtectedRoute>
+            <AppLayout>
+              <ProjectSubmission />
+            </AppLayout>
+          </ProtectedRoute>
         } />
 
         <Route path="/tracking" element={
-          <AppLayout>
-            <ProjectTracking />
-          </AppLayout>
+          <ProtectedRoute>
+            <AppLayout>
+              <ProjectTracking />
+            </AppLayout>
+          </ProtectedRoute>
+        } />
+
+        <Route path="/settings" element={
+          <ProtectedRoute>
+            <AppLayout>
+              <SettingsScreen />
+            </AppLayout>
+          </ProtectedRoute>
         } />
 
         <Route path="*" element={<Navigate to="/" replace />} />

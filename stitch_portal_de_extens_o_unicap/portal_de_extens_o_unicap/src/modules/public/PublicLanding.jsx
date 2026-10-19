@@ -51,7 +51,7 @@ FaqItem.propTypes = {
   }).isRequired
 };
 
-export default function PublicLanding() {
+export default function PublicLanding({ authenticated = false }) {
   const navigate = useNavigate();
   const [selectedProject, setSelectedProject] = useState(null);
   const {
@@ -108,8 +108,8 @@ export default function PublicLanding() {
                 placeholder="Busque por área, curso, bairro ou palavra-chave..."
               />
             </div>
-            <Button className="w-full sm:w-auto" onClick={() => navigate("/")}>
-              Área de Inscrição
+            <Button className="w-full sm:w-auto" onClick={() => navigate(authenticated ? "/submit" : "/")}>
+              {authenticated ? "Submeter Proposta" : "Área de Inscrição"}
               <ArrowForward className="h-4 w-4" />
             </Button>
           </div>
@@ -301,3 +301,7 @@ export default function PublicLanding() {
     </div>
   );
 }
+
+PublicLanding.propTypes = {
+  authenticated: PropTypes.bool
+};

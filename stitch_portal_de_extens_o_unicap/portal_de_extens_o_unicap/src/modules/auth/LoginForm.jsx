@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSession } from "../../contexts/SessionContext";
-import Button from "../ui/Button";
-import Input from "../ui/Input";
-import Badge from "../ui/Badge";
-import { Shield, Lock, LockOpen, Mail, Eye, EyeOff } from "../ui/Icons";
+import Button from "../../components/ui/Button";
+import Input from "../../components/ui/Input";
+import Badge from "../../components/ui/Badge";
+import { Shield, Lock, LockOpen, Mail, Eye, EyeOff } from "../../components/ui/Icons";
 
 const profiles = [
   {
@@ -30,6 +30,7 @@ export default function LoginForm() {
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [keepSession, setKeepSession] = useState(true);
   const [formError, setFormError] = useState(null);
 
   if (isAuthenticated) {
@@ -40,13 +41,14 @@ export default function LoginForm() {
     event.preventDefault();
     setFormError(null);
 
-    const success = await login(identifier, password, profile);
+    const success = await login(identifier, password, profile, { persist: keepSession });
     if (!success) {
       setFormError(error || "Não foi possível fazer login.");
       return;
     }
 
-    navigate("/dashboard", { replace: true });
+    // Cada perfil segue para a sua área inicial.
+    navigate(profile === "gestor" ? "/dashboard" : "/public", { replace: true });
   };
 
   return (
@@ -123,9 +125,12 @@ export default function LoginForm() {
             <label className="font-label-md font-semibold text-on-surface" htmlFor="password">
               Senha de Acesso
             </label>
-            <Link to="#" className="text-sm text-primary font-semibold hover:underline">
+            <a
+              className="text-sm text-primary font-semibold hover:underline"
+              href="mailto:extensao@unicap.br?subject=Recupera%C3%A7%C3%A3o%20de%20senha%20%E2%80%94%20Portal%20de%20Extens%C3%A3o"
+            >
               Esqueceu a senha?
-            </Link>
+            </a>
           </div>
           <div className="relative">
             <input
@@ -148,7 +153,12 @@ export default function LoginForm() {
         </div>
 
         <label className="flex cursor-pointer items-center gap-2 text-body-sm text-on-surface-variant">
-          <input type="checkbox" className="h-4 w-4 rounded accent-primary" defaultChecked />
+          <input
+            type="checkbox"
+            className="h-4 w-4 rounded accent-primary"
+            checked={keepSession}
+            onChange={(event) => setKeepSession(event.target.checked)}
+          />
           Manter sessão conectada com segurança
         </label>
 

@@ -38,6 +38,11 @@ export default function ProjectTracking() {
     setTimeout(() => setNotice(null), 3000);
   };
 
+  const showNotice = (message, duration = 4000) => {
+    setNotice(message);
+    setTimeout(() => setNotice(null), duration);
+  };
+
   const handleHomologate = (monthId, studentId) => {
     const result = homologate(monthId, studentId);
     if (!result.ok && result.message) {
@@ -94,11 +99,34 @@ export default function ProjectTracking() {
           </div>
         </div>
         <div className="flex flex-wrap gap-2 lg:w-64 lg:flex-col">
-          <Button className="flex-1">Emitir Declaração do Projeto</Button>
-          <Button variant="secondary" className="flex-1">
+          <Button
+            className="flex-1"
+            onClick={() =>
+              showNotice(
+                `Declaração de vigência de "${project.title}" emitida (mock) — em produção o documento seria baixado em PDF.`
+              )
+            }
+          >
+            Emitir Declaração do Projeto
+          </Button>
+          <Button
+            variant="secondary"
+            className="flex-1"
+            onClick={() => {
+              setActiveTab("relatorios");
+              showNotice("Selecione o relatório desejado e clique em Enviar.", 3000);
+            }}
+          >
             Submeter Relatório Parcial
           </Button>
-          <Button variant="outline" className="flex-1">
+          <Button
+            variant="outline"
+            className="flex-1"
+            onClick={() => {
+              setActiveTab("frequencia");
+              showNotice("Gerenciamento de bolsistas: use a folha mensal abaixo.", 3000);
+            }}
+          >
             Gerenciar Bolsistas
           </Button>
         </div>

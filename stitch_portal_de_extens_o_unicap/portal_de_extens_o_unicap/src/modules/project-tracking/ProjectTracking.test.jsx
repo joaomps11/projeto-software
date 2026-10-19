@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
-import { beforeEach } from "vitest";
+import { afterEach, beforeEach, vi } from "vitest";
 import ProjectTracking from "./ProjectTracking";
 
 function renderTracking() {
@@ -132,5 +132,75 @@ describe("Sprint 4 — acompanhamento de projeto", () => {
     expect(screen.getByRole("heading", { name: /indicadores por discente/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /homologação por competência/i })).toBeInTheDocument();
     expect(screen.getByText(/lucas andrade bezerra/i)).toBeInTheDocument();
+  });
+});
+
+describe("Sprint 8 — ações do cabeçalho e exportação", () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+    delete URL.createObjectURL;
+    delete URL.revokeObjectURL;
+  });
+
+  it("'Submeter Relatório Parcial' leva para a aba de relatórios", async () => {
+    const user = userEvent.setup();
+    renderTracking();
+
+    await user.click(screen.getByRole("button", { name: /submeter relatório parcial/i }));
+
+    expect(screen.getByRole("heading", { name: /relatórios & pareceres/i })).toBeInTheDocument();
+  });
+
+  it("'Gerenciar Bolsistas' leva para a folha de frequência", async () => {
+    const user = userEvent.setup();
+    renderTracking();
+
+    await user.click(screen.getByRole("button", { name: /visão geral & indicadores/i }));
+    await user.click(screen.getByRole("button", { name: /gerenciar bolsistas/i }));
+
+    expect(screen.getByRole("heading", { name: /equipe discente e homologação/i })).toBeInTheDocument();
+  });
+
+  it("'Emitir Declaração do Projeto' confirma a emissão", async () => {
+    const user = userEvent.setup();
+    renderTracking();
+
+    await user.click(screen.getByRole("button", { name: /emitir declaração do projeto/i }));
+
+    expect(await screen.findByRole("status")).toHaveTextContent(/declaração de vigência/i);
+  });
+
+  it("'Exportar Folha' dispara o download do CSV da competência", async () => {
+    const createObjectURL = vi.fn(() => "blob:folha");
+    URL.createObjectURL = createObjectURL;
+    URL.revokeObjectURL = vi.fn();
+    vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+
+    const user = userEvent.setup();
+    renderTracking();
+
+    await user.click(screen.getByRole("button", { name: /exportar folha/i }));
+
+    expect(createObjectURL).toHaveBeenCalledTimes(1);
+    expect(createObjectURL.mock.calls[0][0].type).toContain("text/csv");
+  });
+
+  it("'Baixar' no painel de relatórios gera o TXT do relatório", async () => {
+    const createObjectURL = vi.fn(() => "blob:relatorio");
+    URL.createObjectURL = createObjectURL;
+    URL.revokeObjectURL = vi.fn();
+    vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+
+    const user = userEvent.setup();
+    renderTracking();
+
+    await user.click(screen.getByRole("button", { name: /relatórios & pareceres/i }));
+    const downloadButtons = screen.getAllByRole("button", { name: /baixar/i });
+    expect(downloadButtons.length).toBeGreaterThan(0);
+
+    await user.click(downloadButtons[0]);
+
+    expect(createObjectURL).toHaveBeenCalledTimes(1);
+    expect(createObjectURL.mock.calls[0][0].type).toContain("text/plain");
   });
 });

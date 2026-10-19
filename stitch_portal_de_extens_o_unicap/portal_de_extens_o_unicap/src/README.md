@@ -18,16 +18,17 @@ src/
   components/
     ui/            # Design system compartilhado (Button, Badge, Card, Input,
                    #   Modal, Icons, ErrorBoundary). Nada de regra de negócio aqui.
-    protected/     # AppLayout (shell autenticado: header, nav, footer)
-    login/         # LoginForm (fluxo de acesso)
+    layout/        # AppLayout (shell autenticado: header, nav, footer)
   contexts/        # SessionContext — perfil, login/logout, rotas
   modules/         # Um diretório por domínio, autocontido:
+    auth/                  # LoginForm (fluxo de acesso por perfil)
     public/                # Vitrine pública
     project-submission/    # Fluxo docente de submissão em etapas
     project-tracking/      # Acompanhamento (frequência, marcos, relatórios)
     manager-dashboard/     # Painel gestor (KPIs, filtros, prazos)
-  utils/           # format.js, validators.js — funções puras
-  App.jsx          # Rotas e proteção por perfil
+    settings/              # Configurações da conta (perfil, notificações, privacidade)
+  utils/           # format.js — formatação pt-BR; download.js — exportação CSV/TXT
+  App.jsx          # Rotas, proteção por perfil e wrapper da vitrine autenticada
 ```
 
 ### Anatomia de um módulo
@@ -54,6 +55,9 @@ renderizam e delegam. Isso mantém os testes rápidos e o código previsível.
 - **Ícones:** sempre de `components/ui/Icons.jsx` (named exports) — nunca SVG inline novo.
 - **Modal:** use `components/ui/Modal.jsx` (Escape, backdrop, scroll lock, foco) — não crie overlay manual.
 - **Formatação:** `Intl.NumberFormat`/`DateTimeFormat` pt-BR via `utils/format.js`.
+- **Exportações:** CSV/TXT via `utils/download.js` (`toCsv` + `downloadTextFile`), com o
+  conteúdo montado por funções puras no `logic` do módulo (ex.: `buildProjectsCsv`,
+  `buildFrequencyCsv`) — testáveis sem tocar na UI.
 - **Estilos:** só classes Tailwind com tokens do design system; sem cores fixas fora do tema.
 - **Acessibilidade:** `aria-label` em controles icônicos, `aria-current` em paginação/stepper,
   `role="status"` para contadores dinâmicos, foco visível preservado.

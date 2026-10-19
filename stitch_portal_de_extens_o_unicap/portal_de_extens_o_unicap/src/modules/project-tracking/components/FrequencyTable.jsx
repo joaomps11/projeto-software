@@ -4,7 +4,8 @@ import Badge from "../../../components/ui/Badge";
 import Button from "../../../components/ui/Button";
 import { AlertTriangle, Download } from "../../../components/ui/Icons";
 import { project } from "../data/trackingData";
-import { PENDING, HOMOLOGATED, MISSING } from "../trackingLogic";
+import { PENDING, HOMOLOGATED, MISSING, buildFrequencyCsv } from "../trackingLogic";
+import { downloadTextFile } from "../../../utils/download";
 
 export default function FrequencyTable({
   month,
@@ -64,7 +65,16 @@ export default function FrequencyTable({
           >
             Homologar Selecionados ({homologableSelected.length})
           </Button>
-          <Button variant="outline">
+          <Button
+            variant="outline"
+            onClick={() =>
+              downloadTextFile(
+                `folha-frequencia-${monthId}.csv`,
+                buildFrequencyCsv({ monthLabel, expectedHours, students, sheet, totals }),
+                "text/csv;charset=utf-8"
+              )
+            }
+          >
             <Download className="h-4 w-4" />
             Exportar Folha
           </Button>

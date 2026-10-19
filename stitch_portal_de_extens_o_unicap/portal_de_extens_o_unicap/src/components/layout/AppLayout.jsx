@@ -1,8 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useSession } from "../../contexts/SessionContext";
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
+import Modal from "../ui/Modal";
 import { Logout, Settings } from "../ui/Icons";
 
 function HelpIcon({ className = "h-4 w-4" }) {
@@ -25,11 +27,13 @@ const managerNav = [
 
 const communityNav = [
   { to: "/public", label: "Vitrine Pública", icon: "public" },
-  { to: "/submit", label: "Submeter Projeto", icon: "post_add" }
+  { to: "/submit", label: "Submeter Projeto", icon: "post_add" },
+  { to: "/tracking", label: "Acompanhamento", icon: "monitoring" }
 ];
 
 export default function AppLayout({ children }) {
   const { profile, logout } = useSession();
+  const [helpOpen, setHelpOpen] = useState(false);
   const links = profile === "gestor" ? managerNav : communityNav;
 
   return (
@@ -38,7 +42,10 @@ export default function AppLayout({ children }) {
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="font-display text-xl font-bold text-primary tracking-tight">UNICAP</span>
-            <Badge status={profile === "gestor" ? "active" : "completed"} />
+            <Badge
+              status={profile === "gestor" ? "active" : "completed"}
+              label={profile === "gestor" ? "Perfil Gestor" : "Perfil Estudante"}
+            />
             <span className="hidden sm:inline text-label-sm text-on-surface-variant">
               {profile === "gestor" ? "Área de Gestão" : "Área Pública"}
             </span>
@@ -69,18 +76,19 @@ export default function AppLayout({ children }) {
           <div className="flex items-center gap-3">
             <button
               type="button"
+              onClick={() => setHelpOpen(true)}
               className="inline-flex items-center gap-2 rounded-lg border border-surface-container-high bg-surface-container px-3 py-2 text-label-sm text-on-surface-variant shadow-sm transition-colors hover:bg-surface-container-high hover:text-on-surface"
             >
               <HelpIcon className="h-4 w-4" />
               <span className="hidden sm:inline">Ajuda</span>
             </button>
-            <button
-              type="button"
+            <Link
+              to="/settings"
               className="inline-flex items-center gap-2 rounded-lg border border-surface-container-high bg-surface-container px-3 py-2 text-label-sm text-on-surface-variant shadow-sm transition-colors hover:bg-surface-container-high hover:text-on-surface"
             >
               <Settings className="h-4 w-4" />
               <span className="hidden sm:inline">Configurações</span>
-            </button>
+            </Link>
             <Button variant="ghost" onClick={logout} className="gap-1">
               <Logout className="h-4 w-4" />
               <span className="hidden sm:inline">Sair</span>
@@ -103,6 +111,40 @@ export default function AppLayout({ children }) {
           <span className="sm:inline">Rua do Príncipe, 526, Boa Vista, Recife - PE</span>
         </div>
       </footer>
+
+      <Modal open={helpOpen} onClose={() => setHelpOpen(false)} title="Central de Ajuda" titleId="help-title">
+        <div className="flex flex-col gap-5 p-6">
+          <div>
+            <h2 id="help-title" className="font-headline-md font-semibold text-on-surface">
+              Como podemos ajudar?
+            </h2>
+            <p className="mt-1 text-body-md text-on-surface-variant">
+              Atendimento da Divisão de Extensão (DEG) — segunda a sexta, 8h às 18h.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 rounded-xl border border-surface-container-high bg-surface-container-low p-4 text-body-md text-on-surface-variant">
+            <span>
+              <strong className="text-on-surface">Suporte técnico:</strong>{" "}
+              <a className="font-semibold text-primary underline" href="mailto:extensao@unicap.br">
+                extensao@unicap.br
+              </a>
+            </span>
+            <span>
+              <strong className="text-on-surface">Recuperação de senha:</strong> solicite pelo mesmo e-mail
+              informando seu login institucional ou matrícula.
+            </span>
+            <span>
+              <strong className="text-on-surface">Prazos e pareceres:</strong> consulte o calendário no módulo
+              de Acompanhamento.
+            </span>
+          </div>
+
+          <div className="flex justify-end">
+            <Button onClick={() => setHelpOpen(false)}>Entendi</Button>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 }
